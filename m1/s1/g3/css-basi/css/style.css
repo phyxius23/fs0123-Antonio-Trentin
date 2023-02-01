@@ -1,0 +1,35 @@
+/* 
+Questo è un commento
+*/
+
+/* 
+selettore{
+   proprietà: valore;
+   proprietà: valore;
+   proprietà: valore;
+}
+*/
+
+/* Esempio di selettori */
+/* ------------------------------------------------------ */
+* {margin: 0;} /* selettore universale */
+p {font-size: 30px;} /* selettore base */
+em {font-weight: bold; color: gray;} /* selettore base con proprietà multiple */
+p strong {color: rgba(0, 0, 0, 1);} /* selettore discendente */
+ul, ol {margin-left: 45px;} /* selettore di gruppo */
+
+
+/* CSS del file HTML */
+/* ------------------------------------------------------ */
+div {
+   color: white;
+   background-color: blue;
+}
+
+div span {
+   color: orange;
+}
+
+div, span {
+   border: 1px solid #000;
+}
