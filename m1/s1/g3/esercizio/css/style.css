@@ -1,0 +1,79 @@
+/* Style Generale */
+body {
+   margin: 0;
+   font-family: 'Libre Baskerville', serif;
+}
+a{
+   color: #005B59;
+}
+
+/* Style specifico */
+.header-logo {
+   text-align: center;
+   padding: 1rem 0;
+}
+.header-logo img {
+   height: 50px;
+}
+.header-text {
+   text-align: center;
+   background-color: #FDFAEF;
+   border-top: 1px solid #FFD883;
+   padding: 1rem;
+}
+.header-text p {
+   margin: 0;
+   font-size: 0.9rem;
+}
+.header-text p span {
+   text-transform: uppercase;
+   font-weight: bold;
+}
+.container {
+   max-width: 450px;
+   margin: 0 auto;
+}
+.container-title h1 {
+   text-align: center;
+   font-weight: bold;
+}
+.container-title p {
+   line-height: 1.5rem;
+}
+video {
+   border-radius: 15px;
+   object-fit: cover;
+}
+.container-category {
+   margin: 3rem 0;
+   padding: 0 2rem;
+   border-left: 1px solid #FFD883;
+}
+.container-category p {
+   color: #A70000;
+   text-transform: uppercase;
+   margin: 0;
+}
+.recipe h2 {
+   font-weight: normal;
+   margin: 0;
+   padding-bottom: 1rem;
+   border-bottom: 1px solid #b6e1df;
+}
+.recipe h3 {
+   margin: 1.5rem 0 0;
+}
+.recipe ul {
+   margin: 0;
+}
+.recipe ul li {
+   margin-top: 0.7rem;
+}
+.ingredients, .method {
+   margin-top: 1.5rem;
+}
+.method li span {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
