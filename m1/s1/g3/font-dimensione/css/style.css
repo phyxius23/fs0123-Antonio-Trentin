@@ -1,0 +1,51 @@
+/* 
+Posso modificare la dimensione asosluta di tutti i testi del body 
+   body {
+      font-size: 20px;   
+   }
+*/
+
+/* 
+Il valore di default dell'elemento radice (:root) è di 16px
+   :root {
+      font-size: 16px;
+   } 
+*/
+
+/* ------------------------------------------------------------------- */
+
+/* Esempio Nr. 1 */
+
+#t1 {
+   font-size: 1rem; /* unità di misura relativa all'elemento root => viene calcolata rispetto al font-size della :root */
+}
+#t2 {
+   font-size: 16px;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* Esempio Nr. 2 */
+
+/* Se però cambio il valore di default assegnato al font-size dell'elemento :root e lavoro in rem automaticamente tutti i font-size degli elementi di testo verranno cambiati in proporzione */
+:root {
+   font-size: 25px;
+}
+#t1 {
+   font-size: 1rem; /* unità di misura relativa all'elemento root => viene calcolata rispetto al font-size della :root */
+}
+#t2 {
+   font-size: 16px;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* Esempio Nr. 3 */
+
+/* Se voglio che il font-size sia modificato in base al parent si utilizza l'unità di misura em */
+#parent {
+   font-size: 35px;
+}
+#t3 {
+   font-size: 1em;
+}

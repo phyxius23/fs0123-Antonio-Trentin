@@ -1,0 +1,49 @@
+/* 
+Per selezionare dei selettori specifici utilizzo id e classi.
+
+Mentre l'id può essere assegnato ad un solo elemento, infatti viene definito univoco, la stessa classe può essere assegnata a più elementi.
+Posso pure assegnare più classi allo stesso elemento.
+
+*/
+
+#red {
+   background-color: red;
+}
+
+.orange {
+   background-color: orange;
+}
+
+/* 
+Se due selettori uguali assegnano alla stessa proprietà valori diversi vince l'ultimo dichiarato.
+
+Specificità:
+- div => 1
+- classi => 10
+- id => 100
+- stili inline => 1000
+
+A parità di peso vince la posizione, altrimenti è il peso che determina il vincitore.
+*/
+
+/* CONFLITTI */
+/* ---------------------------------- */
+#conflitti #pink.green { /* 100 + 100 + 10 = 210 */ /* questo vince su #conflitti #pink {...} */
+   background-color: pink;
+}
+                                                      
+#conflitti div { /* 100 + 1 = 101 */
+   background-color: black;
+}
+
+#conflitti div { /* 100 + 1 = 101 */
+   background-color: blue;
+}
+
+#conflitti .green { /* 100 + 10 = 110 */
+   background-color: green;
+}
+
+#conflitti #pink { /* 100 + 100 = 200 */
+   background-color: gray;
+}
