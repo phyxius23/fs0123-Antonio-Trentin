@@ -1,0 +1,55 @@
+.quadrato {
+   width: 200px;
+   height: 200px;
+   border: 1px solid #000;
+   overflow: auto;
+}
+/* 
+Posso modificare l'area interna dell'elemento solo se è display: block (o inline-block); non vale nel caso dei display: inline; 
+La proprietà overflow si occupa di gestire come vengono visualizzati i contenuti che eccedono la dimensione dell'elemento:
+- overflow: hidden; => nasconde il contenuto che eccede
+- overflow: scroll; => visualizza la barra di scorrimento sia che ecceda o no il contenuto
+- overflow: auto; => visualizza la barra di scorrimento solo se il contenuto eccede
+*/
+.max {
+   max-width: 900px;
+   background-color: blue;
+   min-height: 10px;
+}
+
+/* area del padding */
+.padding {
+   padding: 15px; /* tutti i lati */
+   /* 
+   padding-top: 15px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+
+   padding: 15px 0 15px 0; (versione contratta della forma sopra )top, right, bottom, left
+
+   padding: 15 px 0; sopra e sotto 15px, sinistra e destra 0
+   */
+}
+
+/* area del border */
+.border {
+   border: 10px solid #000; /*spessore, stile e colore del bordo */
+   border-radius: 30%; /* permette di arrotondare i bordi, accetta qualunque unità di misura; se applicato 100% ripropone un cerchio */
+}
+
+/* area del margin */
+.margin {
+   margin: 100px;
+      /* 
+   margin-top: 100px;
+   margin-right: 100px;
+   margin-bottom: 100px;
+   margin-left: 100px;
+
+   margin: 100px 0 100px 0; (versione contratta della forma sopra )top, right, bottom, left
+
+   margin: 100 px 0; sopra e sotto 100px, sinistra e destra 0
+   */
+
+}
