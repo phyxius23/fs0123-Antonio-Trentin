@@ -5,8 +5,9 @@
 body {
    font-family: 'Poppins', sans-serif;
    background: #eee;
+   font-weight: 300;
 }
-img {
+img, video {
    max-width: 100%;
 }
 .container {
@@ -15,7 +16,7 @@ img {
    background-position: center;
    background-size: 900px 600px;
    max-width: 450px;
-   padding: 15px;
+   padding: 1rem;
    margin: 0 auto;
 }
 
@@ -26,9 +27,7 @@ img {
    color: #fff;
    padding: 2rem;
    margin-bottom: 11px;
-   font-weight: 500;
    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
-   font-size: 1.2rem;
    text-align: center;
 }
 .header img {
@@ -38,6 +37,8 @@ img {
 }
 .header p {
    text-transform: uppercase;
+   font-size: 1.2rem;
+   font-weight: 500;
    margin-bottom: 1.5rem;
 }
 .menu {
@@ -46,9 +47,10 @@ img {
 }
 .menu a {
    color: #fff;
+   font-size: 1.2rem;
+   font-weight: 500;
    text-decoration: none;
    text-transform: uppercase;
-   font-weight: 500;
 }
 .menu a::before {
    content: "\21D2";
@@ -62,16 +64,15 @@ img {
 /* MAIN */
 .main-container {
    background-color: #0088aa;
-   padding: 15px;
+   padding: 1.2rem;
    margin-bottom: 11px;
-   font-weight: 500;
    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
    background-color: white;
 }
 .main h1 {
-   font-size: 2rem;
+   font-size: 2.2rem;
    font-weight: 500;
-   line-height: 2.5rem;
+   line-height: 3.2rem;
    margin-bottom: 1.5rem;
 }
 .author {
@@ -79,6 +80,9 @@ img {
 }
 .author span {
    color: #bbb;
+   font-size: 1.2rem;
+   font-weight: 400;
+   line-height: 1.7rem;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -99,6 +103,15 @@ img {
 }
 .article ul, .article ol {
    margin: 0 0 1.5rem 2rem;
+}
+.article .code {
+   background-color: #dedede;
+   border-radius: 10px;
+   border: 1px solid #aaa;
+}
+.article video {
+   border-radius: 30px;
+   object-fit: cover;
 }
 .article .tool-online {
    color: #4CA3C9;
@@ -134,7 +147,84 @@ table tbody tr:last-of-type {
 }
 
 /* FORM */
+.form-container {
+   margin-top: 3rem;
+   padding: 1.7rem;
+   background-color: #E5E5E5;
+}
+.form-container h3, .article-container h3 {
+   font-size: 1.8rem;
+   font-weight: 400;
+   margin-bottom: 1.7rem;
+   text-align: center;
+   text-transform: uppercase;
+}
+.form-container p {
+   font-size: 1.2rem;
+   line-height: 2rem;
+   margin-bottom: 1rem;
+}
+.form input {
+   font-size: 1.3rem;
+   padding: 0.5rem;
+   border: none;
+   border-bottom-style: dotted;
+   max-width: 70%;
+}
+.form .btn {
+   background-color: #4165C3;
+   color: #fff;
+   font-size: 1.3rem;
+   border: none;
+   padding: 0.5rem;
+}
 
 /* ELEMENTI NELL' ASIDE */
+.article-container {
+   margin-top: 3rem;
+}
+.related-article {
+   padding: 1.7rem;
+   background-color: #E5E5E5;
+   border: 1px solid #ccc;
+   margin-bottom: 1.2rem;
+   font-size: 1.2rem;
+}
+.related-article a {
+   color: #4CA3C9;
+   font-weight: 500;
+   text-decoration: underline;
+}
+.related-article .category {
+   margin-top: 0.5rem;
+}
+.related-article .date {
+   font-size: 1rem;
+   text-align: right;
+   margin-top: 1.5rem;
+}
 
 /* FOOTER */
+.footer {
+   background-color: #0088aa;
+   background: linear-gradient(180deg, rgb(0, 126, 157) 0%, rgba(0,99,125,1) 100%);
+   color: #fff;
+   font-size: 1rem;
+   font-weight: 400;
+   text-align: center;
+   padding: 2rem 1.2rem;
+   margin-top: 2rem;
+   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
+}
+.footer h4 {
+   margin-bottom: 1rem;
+}
+.footer p {
+   line-height: 1.6rem;
+}
+.footer p > a {
+   color: #D13DCB;
+   font-weight: 500;
+}
+
+/* HELPER */

@@ -13,6 +13,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
    <!-- CSS -->
    <link rel="stylesheet" href="assets/css/reset.css" />
    <link rel="stylesheet" href="assets/css/style.css" />
@@ -37,8 +38,9 @@
             <h1>Come creare un template per i post</h1>
 
             <div class="author">
-               <span>di Mario Rossi - pubblicato il 25-10-2020</span>
-            </div> <!-- author -->
+               <span><i class="fas fa-pen-square"></i>
+                  di Mario Rossi - <i class="fas fa-clock"></i> pubblicato il 25-10-2020</span>
+            </div> <!-- .author -->
 
             <article class="article">
                <p>
@@ -49,18 +51,19 @@
 
                <p>Le varie aree saranno quindi suddivise in:</p>
                <ul>
-                  <li>Contenuti di intestazione del tag &lt;header&gt;</li>
+                  <li>Contenuti di intestazione del tag <code class="code">&lt;header&gt;</code></li>
                   <li>
-                     Contenuti centrali variabili del tag &lt;main&gt; (corpo
+                     Contenuti centrali variabili del tag <code class="code">&lt;main&gt;</code> (corpo
                      principale)
                   </li>
                   <li>
                      Contenuti di fine pagina comuni, da inserire nel tag
-                     &lt;footer&gt;
+                     <code class="code">&lt;footer&gt;</code>
                   </li>
                </ul>
 
-               <h3>Formattazione del codice</h3>
+               <p class="mb0">Formattazione del codice</p>
+               
                <p>
                   Il testo dell'articolo dovrà essere formattato per identificare
                   tutte le parti da <span>selezionare con i CSS </span>. Perciò i
@@ -129,49 +132,58 @@
                   essere stati dei veri developers come lui:
                </p>
 
-               <!-- 
-                  MANCA DA INSERIRE L'ELEMENTO VIDEO
-                -->
+               <div class="video-container">
+                  <video poster="assets/img/poster-video.jpg" controls>
+                     <source src="assets/video/developer.mp4" type="video/mp4">
+                  </video>
+               </div> <!-- video-container -->
             </article>
          </main>
 
          <aside>
-            Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla
-            nostra newsletter:
-            <form>
-            <input type="email" name="e-mail" placeholder="E-mail" />
-            <label for="bottone">Iscriviti!</label>
-            <input type="button" id="bottone" />
-            </form>
-            <p id="articoli-correlati">Articoli correlati:</p>
-            <div id="articoli">
-            <article>
-               <a href="">Validare il codice HTML</a>
-               <p>Categoria: develop</p>
-               <p>Data: 18-9-2020</p>
-            </article>
-            <article>
-               <a href="">Correggere la sintassi</a>
-               <p>Categoria: develop</p>
-               <p>Data: 16-9-2020</p>
-            </article>
-            <article>
-               <a href=""> Meno Kb nella paginaMeno Kb nella pagina</a>
-               <p>Categoria: ottimizzazione</p>
-               <p>Data: 30-9-2020</p>
-            </article>
-            </div>
+            <div class="form-container">
+               <h3>Novità</h3>
+               <p>
+                  Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla
+                  nostra newsletter:
+               </p>
+               <form>
+                  <div class="form">
+                     <input type="email" name="e-mail" placeholder="Inserisci l'e-mail" />
+                     <button class="btn">Iscriviti!</button>   
+                  </div> <!-- .form -->
+               </form>   
+            </div> <!-- .form-container -->
+                        
+            <div class="article-container">
+               <h3 class="article-title">Articoli correlati</h3>
+
+               <article class="related-article">
+                  <a href="#">Validare il codice HTML</a>
+                  <p class="category"><i class="fas fa-tag"></i> Categoria: develop</p>
+                  <p class="date"><i class="fas fa-calendar-alt"></i> Data: 18-9-2020</p>
+               </article>
+
+               <article class="related-article">
+                  <a href="#">Correggere la sintassi</a>
+                  <p class="category"><i class="fas fa-tag"></i> Categoria: develop</p>
+                  <p class="date"><i class="fas fa-calendar-alt"></i> Data: 16-9-2020</p>
+               </article>
+
+               <article class="related-article">
+                  <a href="#">Meno Kb nella pagina</a>
+                  <p class="category"><i class="fas fa-tag"></i> Categoria: ottimizzazione</p>
+                  <p class="date"><i class="fas fa-calendar-alt"></i> Data: 30-9-2020</p>
+               </article>
+            </div> <!-- .articoli-container -->
          </aside>
       </div> <!-- .main-container -->
 
-      <footer>
-         <p>Blog Epicode &copy;2021</p>
+      <footer class="footer">
+         <h4>Blog Epicode &copy;2021</h4>
          <p>
-            Testata online di Mario Rossi, registrata con prot. n.213/2018 - via
-            Luigi Einaudi 2 - Milano. P.IVA 00112233.
+            Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA 00112233. <a href="mailto:info@epicode.school">info@epicode.school</a>
          </p>
-
-         <p><a href="info@epicode.school">info@epicode.school</a></p>
       </footer>
    </div> <!-- container -->
 </body>
