@@ -1,0 +1,50 @@
+.quadrato {
+   width: 200px;
+   height: 200px;
+   border: 1px solid #000;
+}
+#q1 {
+   background-image: url(../img/html5.png);
+   background-size: 100px auto; /* asse X, asse Y*/
+   background-repeat: no-repeat;
+   background-position: center; /* asse X, asse Y; nel caso fosse specificato un solo valore vale per entrambi gli assi */
+}
+#q2 {
+   background-image: url(../img/html5.png), url(../img/html5.png);
+   background-size: 100px auto; /* asse X, asse Y*/
+   background-repeat: no-repeat;
+   background-position: right, left; /* asse X, asse Y; */
+}
+#q3 {
+   background-image: url(../img/tram.jpg);
+   background-size: cover;
+   width: 100%;
+   height: 500px;
+}
+#q4 {
+   background-image: url(../img/tram.jpg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 500px;
+}
+
+/* immagine che non va oltre la larghezza del contenitore */
+#q10 img {
+   max-width: 100%;
+}
+
+/* immagine che prende obbligatoriamente la larghezza del contenitore */
+/* #q11 {
+   width: auto;
+}
+#q11 img {
+   width: 100%;
+} */
+
+/* Format CSS */
+h3 {
+   font-size: 2rem;
+   font-weight: bold;
+}
