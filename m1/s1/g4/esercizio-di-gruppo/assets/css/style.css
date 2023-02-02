@@ -1,110 +1,140 @@
 /* IMPOSTAZIONI GENERALI */
 * {
    box-sizing: border-box;
- }
- 
- body {
-   font-family: "Poppins", sans-serif;
- }
- 
- nav ul {
-   list-style-type: none;
- }
- 
- .container {
-   background-size: cover;
+}
+body {
+   font-family: 'Poppins', sans-serif;
+   background: #eee;
+}
+img {
+   max-width: 100%;
+}
+.container {
    background-image: url(../img/sfondo.png);
+   background-repeat: repeat;
+   background-position: center;
+   background-size: 900px 600px;
    max-width: 450px;
    padding: 15px;
    margin: 0 auto;
- }
- /* HEADER */
- header {
+}
+
+/* HEADER */
+.header {
    background-color: #0088aa;
-   padding: 15px;
+   background: linear-gradient(180deg, rgba(0,150,187,1) 0%, rgba(0,99,125,1) 100%);
+   color: #fff;
+   padding: 2rem;
    margin-bottom: 11px;
    font-weight: 500;
    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
- }
- 
- header img {
-   width: 55%;
-   margin: 20px auto;
-   display: block;
- }
- 
- nav,
- h3 {
+   font-size: 1.2rem;
    text-align: center;
-   color: white;
+}
+.header img {
+   width: 55%;
+   margin: 0 auto 2rem auto;
+   display: block;
+}
+.header p {
+   text-transform: uppercase;
    margin-bottom: 1.5rem;
-   margin-top: 1.5rem;
- }
- nav a {
+}
+.menu {
+   list-style-type: none;
+   line-height: 1.7rem;
+}
+.menu a {
+   color: #fff;
    text-decoration: none;
-   color: white;
- }
- nav li {
-   margin: 6px 0;
- }
- 
- nav a::after {
-   content: "\21D0";
-   margin-left: 5px;
- }
- 
- nav a::before {
+   text-transform: uppercase;
+   font-weight: 500;
+}
+.menu a::before {
    content: "\21D2";
    margin-right: 5px;
- }
- 
- .fa-pen-square:before {
-   content: "\f14b";
- }
- 
- /* MAIN */
- .mas {
+}
+.menu a::after {
+   content: "\21D0";
+   margin-left: 5px;
+}
+
+/* MAIN */
+.main-container {
    background-color: #0088aa;
    padding: 15px;
    margin-bottom: 11px;
    font-weight: 500;
    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
    background-color: white;
- }
- 
- main h1 {
+}
+.main h1 {
    font-size: 2rem;
    font-weight: 500;
    line-height: 2.5rem;
- }
- 
- .autor {
-   margin: 1rem 0;
- }
- 
- main span {
+   margin-bottom: 1.5rem;
+}
+.author {
+   margin-bottom: 1.5rem;
+}
+.author span {
+   color: #bbb;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+.article {
+   font-size: 1.3rem;
+   font-weight: 300;
+   line-height: 2rem;
+}
+.article p {
+   margin-bottom: 1.5rem;
+}
+.article p.mb0 {
+   margin-bottom: 0;
+}
+.article span {
    color: #a91c70;
- }
- .perp p {
-   margin: 1em 0;
- }
- 
- p,
- ul,
- ol {
-   line-height: 1.5rem;
- }
- 
- .mas ul,
- ol {
-   margin-left: 2rem;
- }
- /* ELEMENTI NEL MAIN - ARTICLE */
- 
- /* TABELLE */
- 
- /* FORM */
- 
- /* ELEMENTI NELL' ASIDE */
- 
- /* FOOTER */
+   font-weight: 500;
+}
+.article ul, .article ol {
+   margin: 0 0 1.5rem 2rem;
+}
+.article .tool-online {
+   color: #4CA3C9;
+   font-weight: 500;
+   text-decoration: underline;
+}
+
+/* TABELLE */
+table {
+   width: 100%;
+   margin: 2.5rem 0;
+}
+table caption {
+   font-style: italic;
+   font-weight: 500;
+}
+table thead tr {
+   background-color: #4165C3;
+   color: #fff;
+}
+thead th, tbody td {
+   padding: 1.2rem;
+   text-align: center;
+}
+table tbody tr {
+   border-bottom: 1px solid #bbb;
+}
+table tbody tr:nth-of-type(even) {
+   background-color: #eee;
+}
+table tbody tr:last-of-type {
+   border-bottom: 2px solid #4165C3;
+}
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
