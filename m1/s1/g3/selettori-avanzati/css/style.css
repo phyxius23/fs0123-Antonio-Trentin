@@ -1,0 +1,52 @@
+/* Stili Generali */
+a, a:visited, a:active {
+   color: #000;
+   text-decoration: none;
+}
+a:active {
+   font-size: 3rem;
+}
+
+/*  */
+body {
+   font-size: 30px;
+}
+section span {
+   color: rgb(41, 121, 202);
+}
+section > span {
+   text-decoration: line-through;
+}
+section + small { /* Il primo small dopo la section */
+   font-weight: bold;
+}
+section ~ small { /* Tutti gli small dopo una section */
+   color: red;
+}
+
+/* Esempio menu mobile pure CSS */
+#toggle {
+   display: none;
+}
+#menu {
+   background-color: bisque;
+   height: 0; /* se imposto height:0 ma non overflow: hidden continuerò a vedere il contenuto dei vari li della ul */
+   overflow: hidden;
+   transition: height 0.3s;
+}
+#toggle:checked + #menu {
+   height: 110px;
+}
+
+/* Effetti hover */
+#menu li:hover {
+   background-color: #fff;
+}
+
+/* pseudo-selettori */
+table td {
+   border: 1px solid #bbb;
+   border-collapse: collapse;
+}
+
+/* pseudo-elementi */
