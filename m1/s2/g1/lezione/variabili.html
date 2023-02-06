@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Variabili JS</title>
+</head>
+<body>
+   <script>
+
+      var numero = 5; // var => identificativo della variabili
+      var nomeUtente = 'Mario'; // nomeUtente => definizione camelCase
+
+      console.log(numero, nomeUtente);
+
+      /**
+       * Tipi di dato
+       * -------------------------------------
+       * JS è debolmente tipizzato, cioè non dobbiamo dichiarare il tipo di dato che conterrà la 
+       * variabile. 
+       * Questi alcuni tipi:
+       * - string => '...' "..."
+       * - number => 5
+       * - boolean => true or false
+       * - array => [...]
+       * - object => {...}
+       */
+
+      var valore1 = 2;
+      var valore2 = 3;
+      var risultato = valore1 + valore2;
+      // var risultato; //se non assegno un valore a risultato quando vado ad eseguire l'istruzione console.log() sotto mi restituirà come valore di risultato 'undefined'
+
+      console.log(risultato, valore1 + valore2);
+
+      
+      /**
+       * Operatori aritmetici
+       * -------------------------------------
+       *    + => somma
+       *    / => divisione
+       *    * => moltiplicazione
+       *    - => sottrazione
+       */
+      
+      var nome = 'Mario';
+      var saluto = 'Ciao';
+      
+      console.log(saluto + nome);
+      console.log(saluto + ' ' + nome);
+      
+      /**
+       * Conversione tipi di dato (Parkour!!)
+       * -------------------------------------
+       */
+      
+      var num = 10;
+      var strNum = '10';
+      
+      console.log(num + strNum); //il numero si converte in stringa (questo perchè l'operatore + ha doppia funzione di somma e concatenamento), avviene un concatenamente
+      console.log(num * strNum); //la stringa viene convertita in numero, avremo una moltiplicazione
+      console.log(num * '10a'); //poichè la stringa contiene anche una lettera l'istruzione mi restituisce NaN (not a number)
+      
+      console.log(typeof num);
+      </script>
+</body>
+</html>
