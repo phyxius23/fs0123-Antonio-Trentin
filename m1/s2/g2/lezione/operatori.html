@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Operatori</title>
+</head>
+<body>
+
+   <script>
+
+      // OPERATORI DI ASSEGNAZIONE
+
+      let a = 2;
+      let b = 4;
+
+      console.log(b); //=> 4
+      
+      b = 6;
+      console.log(b); //=> 6
+
+      a += 2; //2 + 2 = 4
+      console.log(a); //=> 4
+      
+      a -= 2; //4 - 2 = 2
+      console.log(a); //=> 2
+
+      let c = '<div>Ciao';
+      c += '</div>'; //=> '<div>Ciao' + '</div>'
+      console.log(c); //=> <div>Ciao</div>
+
+      // -------------------------------------------------------------------------------- //
+
+      // OPERATORI LOGICI E DI COMPARAZIONE
+      let anni = 30;
+
+      console.log(30 < 18); //=> false
+      console.log(30 > 18); //=> true
+      console.log(18 > 18); //=> false, 18 è uguale a 18, non superiore
+      console.log(18 >= 18); //=> true se è uguale a 18 o superiore
+      console.log(18 <= 18); //=> true se è uguale a 18 o inferiore
+      console.log(18 == 18); //=> true se è uguale
+      console.log(18 != 18); //=> false perchè uguale
+      
+      //questa sotto non è una condizione dato che l'uguale utilizzato è di assegnamento, per renderla una condizione di confronto devo utilizzare il doppio uguale. Il doppio uguale viene utilizzato nelle condizioni che devono tornare un booleano
+      /* 
+      if(anni = 20){ 
+         console.log('ok');
+      }
+      */
+
+      console.log(anni == '30'); //=> true; conversione e comparazione, viene valutato il dato e non il tipo di dato
+      console.log(anni === '30'); //=> false; comparazione, viene comparato valore e tipo di dato
+
+      /**
+       * altra possibilità: !==
+       * devono essere differenti il tipo o il valore
+      */
+
+      console.log(anni >= 18 && anni <= 110); //=> true perchè entrambe vere
+      console.log(anni >= 18 || anni <= 110); //=> true perchè almeno una vera
+
+      console.log(true); //=> true
+      console.log(!true); //=> false; questo tipo di scrittura viene utilizzato quando ho bisogno di invertire il valore booleano risultante
+
+      // -------------------------------------------------------------------------------- //
+
+      // OPERATORE TERNARIO
+      // si può usare come if ... else a patto che abbia solo una istruzione per ramo
+      
+      let controllo = anni >= 18 ? 'Sei maggiorenne' : 'Sei minorenne';
+
+      console.log(controllo);
+
+      let stringa = `L'uno e l'altro`;
+      console.log(stringa);
+   </script>
+   
+</body>
+</html>

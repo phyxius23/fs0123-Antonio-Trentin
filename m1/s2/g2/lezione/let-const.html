@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Let e Const</title>
+</head>
+<body>
+   
+   <script>
+
+      // apro un blocco
+      {
+         var a = 0; //non è soggetta a blockscope
+         console.log(a);
+      }
+      console.log(a);
+
+      // ----------------------------------------------------------- //
+      
+      // LET
+
+      {
+         let b = 1;
+         console.log(b);
+      }
+      //console.log(b); //Uncaught ReferenceError: b is not defined
+      // ----------------------------------------------------------- //
+      
+      
+      var c = 2;
+      {
+         let c = 1; 
+         console.log(c); //mi riferisco alla let c del blocco
+      }
+      console.log(c); //mi riferisco alla var c fuori dal blocco
+      
+      // ----------------------------------------------------------- //
+      
+      // CONST
+
+      // sono delle variabili che non possono essere riassegnate
+      // convenzione di naming: scrivere le costanti totalmente in maiuscolo 
+      // es. NOME, NOME_DELLA_COSTANTE
+      const d = 4;
+
+      //d = 9; //Uncaught TypeError: Assignment to constant variable.
+
+      // valori interni
+      const OGGETTO = {
+         nome: 'Mario',
+         cognome: 'Rossi'
+      }
+
+      OGGETTO.nome = 'Marco';
+      console.log(OGGETTO.nome);
+
+      OGGETTO.sex = 'Male';
+      console.log(OGGETTO);
+      // N.B.: per quanto riguarda gli oggetti posso riassegnare i valori al loro interno anche se dichiarati con const (ma non la sua struttura, quindi non posso inserire una proprietà aggiuntiva: questa parte l'ho testata e non è vera)
+
+      // Object.freeze(OGGETTO); //=> posso "congelare l'oggetto"
+
+
+
+
+
+
+   </script>
+
+</body>
+</html>
