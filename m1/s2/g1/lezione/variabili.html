@@ -58,9 +58,14 @@
       var num = 10;
       var strNum = '10';
       
-      console.log(num + strNum); //il numero si converte in stringa (questo perchè l'operatore + ha doppia funzione di somma e concatenamento), avviene un concatenamente
-      console.log(num * strNum); //la stringa viene convertita in numero, avremo una moltiplicazione
-      console.log(num * '10a'); //poichè la stringa contiene anche una lettera l'istruzione mi restituisce NaN (not a number)
+      //il numero si converte in stringa (questo perchè l'operatore + ha doppia funzione di somma e concatenamento), avviene un concatenamente
+      console.log(num + strNum);
+
+      //la stringa viene convertita in numero, avremo una moltiplicazione
+      console.log(num * strNum);
+      
+      //poichè la stringa contiene anche una lettera l'istruzione mi restituisce NaN (not a number)
+      console.log(num * '10a');
       
       console.log(typeof num);
       </script>

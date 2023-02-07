@@ -14,10 +14,16 @@
 
       console.log(anni);
 
-      if (anni >= 18) {
-         document.write('Sei maggiorenne');
+      if (Number(anni) != NaN) {
+         if (anni >= 18 && anni <= 110) {
+            document.write('<div class="test">Sei maggiorenne, puoi accedere</div>');
+         } else if (anni > 110) {
+            document.write('Sei antico');
+         } else {
+            document.write('Sei minorenne');
+         }
       } else {
-         document.write('Sei minorenne');
+         document.write('Sono ammessi solo numeri');
       }
       
    </script>
