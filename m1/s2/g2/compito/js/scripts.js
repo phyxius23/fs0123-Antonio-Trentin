@@ -94,26 +94,26 @@ console.log(check);
 
 // EXTRA
 // Esempio nr. 1
-let lowerName1 = name1.toLowerCase();
-let lowerName2 = name2.toLowerCase();
+name1 = name1.toLowerCase();
+name2 = name2.toLowerCase();
 
-if(lowerName1 === lowerName2){
-   console.log(`${lowerName1} è uguale a ${lowerName2}`);
+if(name1 === name2){
+   console.log(`${name1} è uguale a ${name2}`);
 }else{
-   console.log(`${lowerName1} è diverso a ${lowerName2}`);
+   console.log(`${name1} è diverso a ${name2}`);
 }
 
 /* Esempio nr. 2
-if(lowerName1 === lowerName2){
-   check = `${lowerName1} è uguale a ${lowerName2}`;
+if(name1 === name2){
+   check = `${name1} è uguale a ${name2}`;
 }else{
-   check = `${lowerName1} è diverso a ${lowerName2}`;
+   check = `${name1} è diverso a ${name2}`;
 }
 console.log(check);
 */
 
 // Esempio nr. 3 - operatore ternario
 /* 
-check = lowerName1 === lowerName2 ? `${lowerName1} è uguale a ${lowerName2}`: `${lowerName1} è diverso a ${lowerName2}`;
+check = name1 === name2 ? `${name1} è uguale a ${name2}`: `${name1} è diverso a ${name2}`;
 console.log(check);
 */
