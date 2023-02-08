@@ -66,8 +66,10 @@ if((int4 % 5) == 0){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let int5 = numberRandom();
-let int6 = numberRandom();
+// let int5 = numberRandom();
+// let int6 = numberRandom();
+let int5 = 8;
+let int6 = 8;
 console.log(int5, int6);
 
 // posso raggruppare le condizioni di differenza?
@@ -94,7 +96,7 @@ if(int5 == 8 || int6 == 8){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let totalShoppingCart = numberRandom();
-let speseSpedizione = 9;
+let speseSpedizione = 10;
 console.log(totalShoppingCart);
 
 if(totalShoppingCart > 50){
@@ -122,7 +124,7 @@ function sconto(){
 totalShoppingCart = sconto();
 
 if(totalShoppingCart > 50){
-   console.log(`La spedizione è gratuita. Il costo totale da versare è di € ${totalShoppingCart}`);
+   console.log(`Il costo totale da versare è di € ${totalShoppingCart}. La spedizione è gratuita.`);
 }else{
    totalShoppingCart += speseSpedizione;
    console.log(`La spedizione costa € ${speseSpedizione}. Il totale da versare è di € ${totalShoppingCart}`);
