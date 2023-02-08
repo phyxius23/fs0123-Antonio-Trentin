@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Array</title>
+</head>
+<body>
+   
+   <script>
+      
+      /** 
+       * DEFINIZIONE:
+       * Un array è una lista di valori (mi raccomando non è una variabile) che può essere 
+       * salvato in una variabile
+      */
+
+      let numeri = [1, 2, 3, 4, 5, 6];
+      document.write(numeri); // quando invio viene convertito in stringa, formato csv
+
+      // ci sono vari modi per creare gli array in JS
+      let arrOld = new Array(); // non si usa
+      
+      let arr = [];
+
+      let dati = [
+         'stringa',
+         12,
+         true,
+         {},
+         []
+      ]
+
+      // lettura dei valori in un array
+      let pizza = [
+         'Margherita',  //=> indice: 0
+         'Diavola',     //=> indice: 1
+         '4 Formaggi'   //=> indice: 2
+      ];
+
+      console.log(pizza); //=> (3) ['Margherita', 'Diavola', '4 Formaggi']
+      
+      console.log(pizza[0]); //=> Margherita
+
+      let pizza1 = pizza[1];
+      console.log(pizza1); //=> Diavola
+      
+      // scrittura
+      pizza[2] = 'Capricciosa';
+      console.log(pizza);
+      
+      // ATTENZIONE: EVITIAMO I BUCHI
+      pizza[4] = 'Marinara'; //=> sconsigliato
+      console.log(pizza); //=> (5) ['Margherita', 'Diavola', '4 Formaggi', vuota, 'Marinara']
+
+      // aggiungere alla fine dell'array senza creare buchi
+      pizza.push('Parigina'); //=> push è un metodo specifico per gli array
+      console.log(pizza); //=> (6) ['Margherita', 'Diavola', 'Capricciosa', vuota, 'Marinara', 'Parigina']
+      console.log(typeof pizza[3]); //=> undefined
+
+      // il metodo push permette di aggiungere più valori con un'unica istruzione
+      // pizza.push('Parigina', 'Mimosa');
+
+      // proprietà length
+      console.log(pizza.length);
+      
+      console.log(pizza[pizza.length - 1]); //=> per leggere l'ultimo elemento dell'array in modo dinamico
+
+      
+      // per riordinare l'array
+      let studenti = ['Mauro','Vittoria','Rebecca'];
+      console.log(studenti); //=> (3) ['Mauro', 'Vittoria', 'Rebecca']
+      
+      studenti.sort(); //=> riordina in ordine alfabetico
+      console.log(studenti); //=> (3) ['Mauro', 'Rebecca', 'Vittoria']
+      
+      studenti.reverse(); //=> inverte l'ordine attuale
+      console.log(studenti); //=> (3) ['Vittoria', 'Rebecca', 'Mauro']
+      
+      let studenti1 = ['Mario','Ciccio','Teresa'];
+      console.log(studenti1); //=> (3) ['Mario', 'Ciccio', 'Teresa']
+      studenti1.reverse(); //=> inverte l'ordine attuale
+      console.log(studenti1); //=> (3) ['Teresa', 'Ciccio', 'Mario']
+
+      // riordinare i numeri
+      let numerati = [1,100,20];
+      numerati.sort(); //=> scritto così il metodo sort non riesce ad ordinare i numeri
+      console.log(numerati);
+      numerati.sort(function(a,b){
+         return a-b;
+      });
+      console.log(numerati);
+
+      // verifica se un dato è un array, restituisce come valore true o false
+      // Array.isArray(studenti);
+      console.log(Array.isArray(studenti)); //=> true
+
+   </script>
+</body>
+</html>
