@@ -8,13 +8,27 @@
 </head>
 <body>
 
-   <button onclick="scrivi()">Clicca</button>
+   <button onclick="coloraBackground()">Colora il body di Rosso!</button>
+
+   <br>
+   
+   <button onclick="scrivi(this)">Clicca!</button>
    
    <script>
-      function scrivi(){
+      function coloraBackground(){
          document.body.style.backgroundColor = 'red';
       }
-      scrivi('Ciao');
+
+      function scrivi(elemento){
+         
+         console.log(elemento);
+
+         elemento.style.backgroundColor = 'yellow';
+
+         console.log(elemento.innerText);
+
+      }
+      // scrivi('Ciao');
       /*
         parola chiave => function
         identificatore => scrivi
