@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function</title>
+</head>
+<body>
+   
+   <script>
+
+      /**
+       * Una funzione è un set di istruzioni che possono essere esguite in un determinato 
+       * momento e più volte
+       * Per avere un effetto io devo invocare il lancio della function.
+       * Posso eseguire il lancio sia prima che dopo la definizione della funzione, questo 
+       * viene permesso dall'hoisting (questo solleva la funzione)
+       * Funzione che eseguono e funzioni che restituiscono un dato
+       * La parola chiave return si usa solo all'interno di function
+      */
+
+      saluto();
+
+      function saluto(){
+         console.log('Ciao');
+      }
+
+      saluto();
+
+      function restituisciSaluto(){
+         return 'Benvenuto'; //restituisce la stringa
+         // ci vuole un solo return per funzione dato che questo termina la funzione
+      }
+
+      console.log(restituisciSaluto()); //=> Benvenuto
+
+      let stringa = restituisciSaluto(); //=> salvo la stringa 'Benvenuto' nella variabile stringa
+      console.log(stringa.toUpperCase());
+      console.log(stringa);
+
+      // SCOPE NELLE FUNZIONI
+      let a = 0;
+
+      function scope(){
+         console.log('let a = ' + a); //=> a è raggiungibile perchè globale
+         var b = 100;
+      }
+
+      // scope();
+      // console.log(b); //=> le variabili che nascono all'interno della funzione non sono raggiungibili dall'esterno, questo perchè potrebbe non nascere MAI se io non vado ad invocare la funzione
+      // lo scope delle var è l'ambito in cui le utilizzi
+
+
+      // FUNCTION PARAMETRICHE
+      function somma(a,b){
+         console.log(a + b);
+      }
+      somma(); //=> NaN, dal momento che non ho inviato dei valori mi va a sommare undefined + undefined
+
+      // closure - annidamento di funzioni
+      function funzione1(){
+         let f = 100;
+
+         function funzione2(){ //=> non posso usarla fuori da funzione1
+            console.log(f);
+
+            let x = 3;
+         }
+         //console.log(x); // x non è raggiungibile perchè nessuna variabile esce dalla funzione in cui è dichiarata, indipendentemente che sia let o var
+
+         funzione2();
+      }
+      funzione1();
+
+
+
+
+   </script>
+</body>
+</html>
+
+<!--  -->
