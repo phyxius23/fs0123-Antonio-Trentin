@@ -15,26 +15,60 @@
        * 
       */
 
-      let objOld = new Object(); //=> sconsigliato
-      let obj = {}; //=> utilizzato
+      // utilizzo le graffe sotto per crearmi un blocco separato dagli esempi successivi
+      {
+         let objOld = new Object(); //=> sconsigliato
+         let obj = {}; //=> utilizzato
 
-      let pizza = {
-         gusto: 'Margherita',
-         prezzo: 5,
-         mostraPrezzo: function(){
-            console.log(`La pizza ${this.gusto} costa ${this.prezzo}€`);
+         let pizza = {
+            gusto: 'Margherita',
+            prezzo: 5,
+            mostraPrezzo: function(){
+               console.log(`La pizza ${this.gusto} costa ${this.prezzo}€`);
+            }
          }
+
+         // lettura di una proprietà
+         console.log(pizza.gusto);
+         console.log(pizza.prezzo);
+               
+         // scrittura di un valore di una specifica proprietà
+         pizza.gusto = 'Diavola'; //=> riassegna il valore
+         console.log(pizza.gusto);
+
+         // utilizzo dei metodi
+         pizza.mostraPrezzo();
+         //mostraPrezzo(); //=> la funzione non esiste
       }
 
-      // lettura di una proprietà
-      console.log(pizza.gusto);
+      {
+         // le classi e il costruttore degli oggetti viene sempre dichiarato con una parola che ha la prima lettera maiuscola
 
-      
-      // scrittura di un valore di una specifica proprietà
-      pizza.gusto = 'Diavola';
-      console.log(pizza.gusto);
+         // costruttore
+         function Pizza(){
+            this.gusto = 'Margherita';
+            this.prezzo = 5;
+            this.mostraPrezzo = function(){
+               console.log(`La pizza ${this.gusto} costa ${this.prezzo}€`);
+            }
+         }
 
-      pizza.mostraPrezzo();
+         let margherita = new Pizza();
+         console.log(margherita);
+      }
+
+      // variabili che contengono una funzione
+      let fn = function(){
+         return 'ok';
+      }
+
+      console.log(fn);     //=>vedo il contenuto della funzione
+      console.log(fn());   //=> eseguo la funzione e così ne ricevo il risultato
+
+      (function(){
+         console.log('autoeseguita');
+      })()
+
    </script>
    
 </body>
