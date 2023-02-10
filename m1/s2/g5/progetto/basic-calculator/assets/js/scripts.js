@@ -4,7 +4,7 @@
 function checkEndDisplay(display){
    if(
       display.value.endsWith('+') || display.value.endsWith('-') || 
-      display.value.endsWith('*') || display.value.endsWith('/') ||
+      display.value.endsWith('x') || display.value.endsWith(':') ||
       display.value.endsWith('.')
    ){
       display.value = display.value.slice(0, display.value.length-1);
@@ -80,4 +80,42 @@ function addNumber(elemento){
    }
 }
 
+/**
+ * Funzione per calcolo percentuale
+ */
+function perCent(){
+   let display = document.querySelector('#display'); //salvo in una var l'elemento #display
 
+   let temp = display.value;
+   let tempPerCent = '';
+   let tempNumber = '';
+   let index = 0;
+
+   if(!(display.value == '')){
+
+      // ho testato varie calcolatrici con i rami divisione e moltiplicazione ma tutte mi danno risultati diverse (BUG)
+      if(temp.includes('+')){
+         index = temp.indexOf('+');
+         tempPerCent = eval(temp.slice(index+1));
+         tempNumber = eval(temp.slice(0, index));
+         temp = (tempNumber / 100) * (100 + tempPerCent);
+      }else if(temp.includes('-')){
+         index = temp.indexOf('-');
+         tempPerCent = eval(temp.slice(index+1));
+         tempNumber = eval(temp.slice(0, index));
+         temp = (tempNumber / 100) * (100 - tempPerCent);
+      }else if(temp.includes(':')){
+         index = temp.indexOf(':');
+         tempPerCent = eval(temp.slice(index+1));
+         tempNumber = eval(temp.slice(0, index));
+         temp = (tempNumber / 100) * (100 / tempPerCent);
+      }else{
+         index = temp.indexOf('x');
+         tempPerCent = eval(temp.slice(index+1));
+         tempNumber = eval(temp.slice(0, index));
+         temp = (tempNumber / 100) * (100 * tempPerCent);
+      }
+
+      display.value = temp;
+   }
+}

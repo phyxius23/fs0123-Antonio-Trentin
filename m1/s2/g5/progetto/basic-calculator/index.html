@@ -19,22 +19,23 @@
       <div class="calculator">
          <input type="text" id="display" placeholder="0">
 
+         <button onclick="reset()" class="spec-style spec-reset">AC</button>
+         <button onclick="perCent()" class="math-style math-total">%</button>
+         <button onclick="operatori(this)" class="math-style math-focus">:</button>
          <button onclick="addNumber(this)" class="numb-style">7</button>
          <button onclick="addNumber(this)" class="numb-style">8</button>
          <button onclick="addNumber(this)" class="numb-style">9</button>
-         <button onclick="operatori(this)" class="math-style">:</button>
+         <button onclick="operatori(this)" class="math-style math-focus">x</button>
          <button onclick="addNumber(this)" class="numb-style">4</button>
          <button onclick="addNumber(this)" class="numb-style">5</button>
          <button onclick="addNumber(this)" class="numb-style">6</button>
-         <button onclick="operatori(this)" class="math-style">x</button>
+         <button onclick="operatori(this)" class="math-style math-focus">-</button>
          <button onclick="addNumber(this)" class="numb-style">1</button>
          <button onclick="addNumber(this)" class="numb-style">2</button>
          <button onclick="addNumber(this)" class="numb-style">3</button>
-         <button onclick="operatori(this)" class="math-style">-</button>
-         <button onclick="reset()" class="spec-style spec-reset">AC</button>
+         <button onclick="operatori(this)" class="math-style math-focus">+</button>
          <button onclick="addNumber(this)" class="numb-style numb-zero">0</button>
          <button onclick="operatori(this)" class="numb-style">,</button>
-         <button onclick="operatori(this)" class="math-style">+</button>
          <button onclick="total()" class="math-style math-total">=</button>
       </div> <!-- .calculator -->
    </div> <!-- .container -->
