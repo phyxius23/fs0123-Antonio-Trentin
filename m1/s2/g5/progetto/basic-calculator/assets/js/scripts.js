@@ -31,7 +31,7 @@ function total(){
 
       checkEndDisplay(display);
 
-      let result = eval(display.value.replaceAll('x','*').replaceAll(':','/'));
+      let result = eval(display.value.replaceAll('x','*').replaceAll(':','/').replaceAll(',','.'));
 
       if(result == 'Infinity'){
 
