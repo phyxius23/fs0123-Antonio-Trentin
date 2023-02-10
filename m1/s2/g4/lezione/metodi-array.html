@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Metodi degli Array</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * METODI DEGLI ARRAY
+       * --------------------
+       * 
+      */
+      // un metodo e una funzione contenuta in un oggetto
+      // forEach()
+      // filter
+
+      // come sono fatti
+      // funzione utilizzata come argomento di un altar si chiama callback
+      // la callback è una funzione che viene passata come argomento ad un altra funzione
+      // array.metodo(funzione(){});
+
+      let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+      
+      // il metodo map serve a creare un nuovo array
+      // si usa quando dobbiamo effettuare una modifica ad ogni elemento dell'array
+      let pizzeDiv = pizze.map(function(valore){
+         return `<div>${valore}</div>`;
+      })
+
+      /** MAP
+       * -------------------- */
+      // 
+      let numeri = [1,2,3,4,5,6,7,8,9];
+
+      let numeriX2 = numeri.map(function(n){return n * 2});
+      
+      console.log(numeriX2);
+
+      // come si faceva prima dell'arrivo di map
+      let numeriMoltiplicati = [];
+
+      numeri.forEach(function(n){
+
+         numeriMoltiplicati.push(n * 2);
+
+      })
+
+      console.log(numeriMoltiplicati);
+
+
+      /** FOREACH
+       * -------------------- */
+      // serve a ciclare gli array
+      pizze.forEach(function(valore){
+
+         document.write(valore)
+
+      }) //posso utilizzare il foreach per ciclare gli array anche se si consiglia l'uso dell for of
+
+
+      /** FILTER
+       * -------------------- */
+      // restituisce un array con tutti i risultati trovati, se non filtra niente restituisce un array vuoto
+      let numeriFiltrati = numeri.filter(function(n){
+         return n > 3;
+      })
+      console.log(numeriFiltrati);
+
+      
+      /** FIND
+       * -------------------- */
+      // a differenza di filter il metodo find restituisce il primo valore trovato [NON UN ARRAY]
+      let numeriTrovato = numeri.find(function(n){
+         return n > 3;
+      })
+      console.log(numeriTrovato);
+
+
+      /** REDUCE
+       * -------------------- */
+      // 
+      let somma = numeri.reduce(function(previousValue,currentValue){
+
+         return previousValue + currentValue;
+
+      })
+      console.log(somma);
+
+      numeri = [1,20,300,50,76,64];
+      let numeroGrande = numeri.reduce(function(previousValue,currentValue){
+         
+         if(previousValue > currentValue){
+            return previousValue;
+         }else{
+            return currentValue;
+         }
+      })
+      console.log(numeroGrande);
+
+
+      /** ELIMINARE ELEMENTI DA UN ARRAY
+       * -------------------- */
+      pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+
+      // andando per esclusione
+
+
+      // eliminazione diretta 
+      pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+
+      let indice = pizze.indexOf('Marinara'); //1. individuare dove si trova il valore (recupero l'indice)
+
+      pizze.splice(indice,1); //elimino la pizza Marinara
+
+      console.log(pizze);
+
+   </script>
+   
+</body>
+</html>

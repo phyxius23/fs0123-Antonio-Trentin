@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>For</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * 
+      */
+
+      for(let i = 0; i < 10; i++){
+         document.write(i);
+      }
+
+      document.write('<hr>');
+
+      for (let i = 9; i >= 0; i--) {
+         document.write(`<div>${i}</div>`);         
+      }
+
+      document.write('<hr>');
+
+      // FOR CON GLI ARRAY (non è il modo corretto per ciclare gli array)
+      let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+
+      for(let i = 0; i < pizze.length; i++){
+
+         document.write(`<div>${pizze[i]}</div>`);
+
+      }
+
+      document.write('<hr>');
+
+      // FOR OF - per ciclare gli ARRAY
+      pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+
+      for(let pizza of pizze){   //=> per ogni pizza dentro pizze
+
+         document.write(`<div>${pizza}</div>`);
+
+      }
+
+      document.write('<hr>');
+
+      for(lettera of 'Testo'){
+
+         document.write(`<div>${lettera}</div>`);
+
+      }
+
+      document.write('<hr>')
+
+      // FOR IN - per ciclare gli OBJECT
+      let margherita = {
+         gusto: 'Margherita',
+         prezzo: 5
+      }
+      let campiVisualizzati = ['gusto'];
+
+      for(let proprieta in margherita){ //per ogni proprietà che trovi dentro margherita scrivi...
+
+         document.write(`<div>${proprieta}: ${margherita[proprieta]}</div>`);
+
+      }
+
+      document.write('<hr>')
+
+      for(let proprieta in margherita){
+
+         if(campiVisualizzati.includes(proprieta)){ //
+
+            document.write(`<div>${proprieta}: ${margherita[proprieta]}</div>`);
+
+         }
+
+      }
+
+   </script>
+   
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>While</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * WHILE
+       * --------------------
+       * È il ciclo che più può portarci verso un loop infinito
+      */
+
+      let i = 0;
+      while(i < 10){         //=> finchè i è inferiore a 100
+         document.write(i);   //=>scrivi a schermo il valore di i
+         i++;                 //=>incrementa i di 1
+      }                       //=> torna al while
+
+      document.write('<br>Il ciclo ha finito le operazioni<br>');
+
+      // esempi con break e continue
+
+      i = 0; // imposto la i a 0
+      while(i <= 5){
+
+         if(i == 2){
+            i++;
+            continue; // salta all'iterazione successiva (passa direttamente al while)
+         }
+
+         document.write(i);
+         i++;
+      }
+
+      document.write('<br>');
+
+      i = 0; // imposto la i a 0
+      while(i <= 5){
+
+         if(i == 2){
+            i++;
+            break; // termina il ciclo (esce dal while)
+         }
+
+         document.write(i);
+         i++;
+      }
+   </script>
+   
+</body>
+</html>

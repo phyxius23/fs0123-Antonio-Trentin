@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Switch</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * SWITCH
+       * --------------------
+       * Quando hai tante condizioni è meglio procedere con uno switch
+      */
+
+      let frutto = 'mela';
+      switch (frutto) {
+         case 'mela':
+            document.write('Le mele costano 1€');
+            break; 
+            //l'utilizzo del break è obbligatorio, se non lo utilizziamo esegue il codice eventualmente contenuto nella seconda condizione; in questo caso avrebbe stampato sia la riga 22 che la 27
+
+         case 'pera':
+            document.write('Le pere costano 0.90€');
+            break;
+
+         case 'ananas':
+         case 'mango':
+            document.write('Ananas e mango costano 3.90€');
+            break;
+            // i due case di riga 30 e 31 scritti come sopra significa: "esegui la prima condizione, se falsa passa alla seconda e se una delle due è vera stampa la riga 32 altrimenti se entrambe false passa oltre"
+
+         default: //in pratica un else
+            document.write('Non abbiamo ' + frutto);
+            break;
+      }
+      // N.B.: quando abbiamo dei range maggiore, minore, uguale si utilizza IF
+      // 
+   </script>
+   
+</body>
+</html>
