@@ -86,7 +86,7 @@ function addNumber(elemento){
 function perCent(){
    let display = document.querySelector('#display'); //salvo in una var l'elemento #display
 
-   let temp = display.value;
+   let temp = display.value.replaceAll(',','.');
    let tempPerCent = '';
    let tempNumber = '';
    let index = 0;
@@ -116,6 +116,6 @@ function perCent(){
          temp = (tempNumber / 100) * (100 * tempPerCent);
       }
 
-      display.value = temp;
+      display.value = temp.toFixed(2);
    }
 }
