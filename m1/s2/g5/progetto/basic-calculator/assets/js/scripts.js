@@ -119,3 +119,12 @@ function perCent(){
       display.value = temp.toFixed(2);
    }
 }
+
+/**
+ * Cercherò di implementare qualche altra funzione della calcolatrice scientifica:
+ * radice quadrata, cubica, di n;
+ * elevazione al quadrato, al cubo, di n;
+ * esponenziale
+ * pigreco
+ * e poi si vede
+ */

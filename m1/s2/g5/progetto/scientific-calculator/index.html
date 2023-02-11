@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calcolatrice</title>
+
+   <!-- CSS Reset -->
+   <link rel="stylesheet" href="assets/css/reset.css">
+
+   <!-- CSS Custom -->
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+   <!-- App Mobile -->
+   <div class="flex">
+      <div class="container">
+         <div class="calculator">
+
+            <input type="text" id="display" placeholder="0">
+
+            <button onclick="sine()" class="spec-style">sin</button>
+            <button onclick="cosine()" class="spec-style">cos</button>
+            <button onclick="tangent()" class="spec-style">tan</button>
+            <button onclick="reset()" class="spec-style spec-reset">AC</button>
+            <button onclick="perCent()" class="math-style">%</button>
+                      
+            <button onclick="hyperbolicSine()" class="spec-style">sinh</button>
+            <button onclick="hyperbolicCosine()" class="spec-style">cosh</button>
+            <button onclick="hyperbolicTangent()" class="spec-style">tanh</button>
+            <button onclick="addNumber(this)" class="numb-style">7</button>
+            <button onclick="addNumber(this)" class="numb-style">8</button>
+            <button onclick="addNumber(this)" class="numb-style">9</button>
+            <button onclick="operatori(this)" class="math-style math-focus">:</button>
+            
+            <button onclick="powerTwo()" class="spec-style expo-style"><span><sup>2</sup>x</span></button>
+            <button onclick="powerThree()" class="spec-style expo-style"><span><sup>3</sup>x</span></button>
+            <button onclick="exponentialTen()" class="spec-style expo-style-ten"><span><sup>x</sup>10</span></button>
+            <button onclick="addNumber(this)" class="numb-style">4</button>
+            <button onclick="addNumber(this)" class="numb-style">5</button>
+            <button onclick="addNumber(this)" class="numb-style">6</button>
+            <button onclick="operatori(this)" class="math-style math-focus">x</button>
+            
+            <button onclick="squareRoot()" class="spec-style root-style"><span><sup>2</sup>&radic;</span></button>
+            <button onclick="cubicRoot()" class="spec-style root-style"><span><sup>3</sup>&radic;</span></button>
+            <button onclick="fractionOneOfX()" class="spec-style fraction-style"><span><sup>1</sup>&frasl;<sub>x</sub></span></button>
+            <button onclick="addNumber(this)" class="numb-style">1</button>
+            <button onclick="addNumber(this)" class="numb-style">2</button>
+            <button onclick="addNumber(this)" class="numb-style">3</button>
+            <button onclick="operatori(this)" class="math-style math-focus">-</button>
+
+            <button onclick="naturalLogarithm()" class="spec-style">ln</button>
+            <button onclick="logarithmTenBase()" class="spec-style logarithm-style"><span>log<sub>10</sub></span></button>
+            <button onclick="pi()" class="spec-style">π</button>
+            <button onclick="addNumber(this)" class="numb-style numb-zero">0</button>
+            <button onclick="operatori(this)" class="numb-style">,</button>
+            <button onclick="operatori(this)" class="math-style math-focus">+</button>
+              
+            <button onclick="factorial()" class="spec-style">x!</button>
+            <button onclick="numberEulero()" class="spec-style">e</button>
+            <button onclick="exponentialE()" class="spec-style expo-style"><span><sup>x</sup>e</span></button>
+            <button onclick="total()" class="math-style math-total">=</button>
+            
+         </div> <!-- .calculator -->
+      </div> <!-- .container -->
+   </div> <!-- .flex-->
+
+   
+   <!-- Scripts -->
+   <script src="assets/js/scripts.js"></script>
+</body>
+</html>

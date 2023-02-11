@@ -1,0 +1,92 @@
+.flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+.container {
+   max-width: 800px;
+   background-color: #000;
+   padding: 2rem;
+   border-radius: 20px;
+}
+.calculator {
+   display: grid;
+   gap: 1em;
+   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+   justify-content: center;
+}
+.calculator input {
+   grid-column: 1/8;
+   font-size: 4rem;
+   text-align: right;
+   padding: 0 0.5rem;
+   border: none;
+   background-color: transparent;
+   color: #fff;
+}
+.calculator button{
+   border-radius: 100%;
+   font-size: 2rem;
+   border: none;
+}
+.calculator .spec-style{
+   background-color: #a6a6a6;
+   color: #000;
+}
+.calculator .spec-style span{
+   position: relative;
+}
+.calculator .spec-style span sup,
+.calculator .spec-style span sub{
+   position: absolute;
+   font-size: 1.3rem;
+}
+.calculator .root-style span sup{
+   top: -5px;
+   left: -10px;
+}
+.calculator .expo-style span sup{
+   top: -5px;
+   right: -12px;
+}
+.calculator .expo-style-ten span sup{
+   top: -12px;
+   right: -10px;
+}
+.calculator .fraction-style sup{
+   top: 0;
+   left: -10px;
+}
+.calculator .fraction-style sub{
+   bottom: 0;
+   right: -10px;
+}
+.calculator .logarithm-style span sub{
+   bottom: -12px;
+   right: -20px;
+}
+.calculator .spec-reset{
+   grid-column: 4/7;
+   border-radius: 50px;
+}
+.calculator .math-style{
+   background-color: #f19837;
+   color: #fff;
+}
+.calculator .math-style.math-focus:focus{
+   opacity: 0.7;
+}
+.calculator .math-total{
+   grid-column: 4/8;
+   border-radius: 50px;
+}
+.calculator .numb-style{
+   background: #333;
+   color: #fff;
+}
+.calculator .numb-zero{
+   grid-column:4/6;
+   border-radius: 50px;
+}
