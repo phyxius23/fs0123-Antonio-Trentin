@@ -7,6 +7,26 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log(checkArray());
+
+function checkArray(){
+
+   let enne = 8;
+   let arr = giveMeRandom(enne);
+   let sum = 0;
+
+   for(let i = 0; i < arr.length; i++){
+      
+      if(arr[i] > 5){
+
+         console.log(arr[i]);
+         
+         sum += arr[i];
+      }
+   }
+
+   return sum;
+}
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -14,6 +34,64 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const shoppingCart = [
+   {
+      price: 1.69,
+      name: "Yogurt Blend",
+      id: 1,
+      quantity: 6 // 10.14
+   },
+   {
+      price: 0.40,
+      name: "Levissima 1,5l",
+      id: 2,
+      quantity: 36 // 14.40
+   },
+   {
+      price: 1.59,
+      name: "Novi Cioccolato Fondente 75%",
+      id: 3,
+      quantity: 4 // 6.36
+   },
+   {
+      price: 6.50,
+      name: "Carne di Scottona 300g",
+      id: 4,
+      quantity: 2 // 13.00
+   },
+   {
+      price: 1.39,
+      name: "Latte",
+      id: 5,
+      quantity: 5 // 6.95
+   },
+   {
+      price: 1.09,
+      name: "Mutti Passata Pomodoro",
+      id: 6,
+      quantity: 6 // 6.54
+   },
+   {
+      price: 7.50,
+      name: "Rio Mare Tonno",
+      id: 7,
+      quantity: 4 // 30.00
+   }
+]
+
+console.log(shoppingCartTotal(shoppingCart));
+
+function shoppingCartTotal(products){
+
+   let carrelloTotale = 0;
+
+   for(product of products){
+
+      carrelloTotale = (product.price * product.quantity) + carrelloTotale;
+   }
+
+   return carrelloTotale.toFixed(2);
+}
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -21,6 +99,27 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let newProduct = 
+{
+   price: 4.50,
+   name: "Grisbi al cioccolato",
+   id: 8,
+   quantity: 2 // 9.00
+};
+
+console.dir(addToShoppingCart(shoppingCart, newProduct));
+
+function addToShoppingCart(products, newProduct){
+
+   products.push(newProduct);
+
+   for(product of products){
+      document.write(`Prodotto: ${product.name}. Costo: € ${product.price}.<br>`);
+   }
+
+   return products
+
+}
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -28,6 +127,22 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log(maxShoppingCart(shoppingCart));
+
+function maxShoppingCart(products){
+
+   let priceMax = products[0].price;
+
+   for(product of products){
+
+      if(priceMax < product.price){
+
+         priceMax = product.price;
+      }
+   }
+
+   return priceMax;
+}
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -35,6 +150,12 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log(latestShoppingCart(shoppingCart));
+
+function latestShoppingCart(products){
+
+   return products.pop();
+}
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
