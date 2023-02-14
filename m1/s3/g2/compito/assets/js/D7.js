@@ -2,77 +2,76 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
-let string1 = 'Stringa';
-let string2 = 'concatenata';
+// let element1 = 'Stringa';
+// let element2 = 'concatenata';
 
-console.log(concatString(string1, string2));
+// console.log(concatString(element1, element2));
 
-function concatString(parametro1, parametro2){
-   return (parametro1.slice(0,2)).concat(parametro2.slice(-3))
-}
+// function concatString(parametro1, parametro2){
+
+//    return ((parametro1.slice(0,2)).concat(parametro2.slice(-3))).toUpperCase();
+// }
+
 
 /* ESERCIZIO 2
   Scrivi una funzione per creare un array di soli valori DISPARI da 1 a 100.
  */
-let numberOdd = [];
+// let arrElements = oddNumber();
 
-numberOdd = oddNumber();
+// console.log(arrElements);
 
-console.log(numberOdd);
+// function oddNumber(){
+//    let arr = [];
+//    let index = 0;
 
-function oddNumber(){
-   let arr = [];
-   let index = 0;
-
-   for(let counter = 0; counter <= 100; counter++){
+//    for(let counter = 0; counter <= 100; counter++){
    
-      if(counter % 2){
+//       if(counter % 2){
    
-         arr[index] = counter;
-         index++;
-      }
-   }
-   return arr;
-}
+//          arr[index] = counter;
+
+//          index++;
+//       }
+//    }
+
+//    return arr;
+// }
 
 
 /* ESERCIZIO 3
   Scrivi una funzione per creare un array di soli valori multipli di 5, da 1 a 100.
  */
-let numberMultiple = [];
+// let arrElements = calcNumberMultiple();
 
-numberMultiple = calcNumberMultiple();
+// console.log(arrElements)
 
-console.log(numberMultiple);
+// function calcNumberMultiple(){
+//    let arr = [];
+//    let index = 0;
 
-function calcNumberMultiple(){
-   let arr = [];
-   let index = 0;
-
-   for(let counter = 0; counter <= 100; counter++){
+//    for(let counter = 0; counter <= 100; counter++){
    
-      if(!(counter % 5)){
+//       if(!(counter % 5)){
    
-         arr[index] = counter;
-         index++;
-      }
-   }
-   return arr;
-}
+//          arr[index] = counter;
+
+//          index++;
+//       }
+//    }
+//    return arr;
+// }
 
 /* ESERCIZIO 4
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
-let number = [];
+let arrElements = numberRandom();
 
-elementsArray = numberRandom();
-
-console.log(elementsArray);
+console.log(arrElements);
 
 function numberRandom(){
    let arr = [];
 
-   for(let i = 0; i < 11; i++){
+   for(let i = 0; i < 10; i++){
 
       arr.push(Math.round((Math.random() * 100)));
    }
@@ -83,33 +82,50 @@ function numberRandom(){
 /* ESERCIZIO 5
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
-console.log(calcEven(elementsArray));
+let arrElements1 = numberRandom();
+console.log(arrElements1);
 
-function calcEven(arrNumberRandom){
+let arrEven = calcEven(arrElements1);
+console.log(arrEven);
 
-   for(let i = 0; i < arrNumberRandom.length;){
 
-      if((arrNumberRandom[i] % 2) || arrNumberRandom[i]==0){
+function calcEven(elements){
 
-         arrNumberRandom.splice(i, 1);
+   for(let i = 0; i < elements.length;){
+
+      if((elements[i] % 2) || elements[i]==0){
+
+         elements.splice(i, 1);
       }else{
 
          i++;
       }
    }
    
-   return arrNumberRandom;
+   return elements;
 }
 
 /* ESERCIZIO 6
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
+let arrayElements10 = numberRandom();
+console.log(arrayElements10);
+
+let sumElements = sumArray(arrayElements10);
+console.log(sumElements);
+
+function sumArray(n) {
+   return n.reduce((a, b) => a + b, 0) // 0 è la condizione di partenza perchè a inizialmente è indefinita
+}
 
 
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
-console.log(numberAddOne(elementsArray));
+let arrElements2 = numberRandom();
+
+console.log(arrElements2);
+console.log(numberAddOne(arrElements2));
 
 function numberAddOne(elements){
 
@@ -133,9 +149,10 @@ console.log(arrayString);
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */
-let elements = numberRandom();
+let arrElements3 = numberRandom();
 
-console.log(deleteEven(elements));
+console.log(arrElements3);
+console.log(deleteEven(arrElements3));
 
 function deleteEven(arrNumberRandom){
 
@@ -157,34 +174,27 @@ function deleteEven(arrNumberRandom){
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
-let var1 = 0;
+let arrElements4 = arrayElements();
 
-console.log(numberRandom());
+console.log(arrElements4);
 
-function numberRandom(){
+function arrayElements(){
    let arr = [];
-   let check = 0;
+   let check = numberRand();
+
    console.log(check);
-   
+
    for(let i = 0; i < 10; i++){
-      check = Math.round((Math.random() * 10));
-      
-      console.log(arr[i], check);
-
-      while (arr[i] == check) {
-
-
-         arr
-
-         console.log(check);
+      while(arr.includes(check)){
+         check = numberRand();
       }
-
-      console.log(check);
-
-      arr.push(check);
+      arr[i] = check;
    }
-
    return arr;
+}
+
+function numberRand(){
+   return Math.round((Math.random() * 10));
 }
 
 
@@ -192,6 +202,12 @@ function numberRandom(){
   Scrivi un algoritmo in grado di invertire un array.
   es: [1, 3, 5] ==> [5, 3, 1]
 */
+let arrElements5 = numberRandom();
+console.log(arrElements5);
+
+arrElements5 = arrElements5.reverse();
+console.log(arrElements5);
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -309,30 +325,108 @@ const movies = [
   },
 ]
 
-/* ESERCIZIO 12
+/* ESERCIZIO 12 --------------------------------------------------------------------------------
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log(numberFilms(movies));
+
+function numberFilms(elements){
+   return elements.length
+}
 
 /* ESERCIZIO 14
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+let arrElements6 = titleMovies();
+
+console.log(arrElements6);
+
+function titleMovies(){
+   
+   let arr = [];
+   let index = 0;
+   
+   for(movie of movies){
+   
+      arr[index] = movie.Title;
+   
+      index++;
+   }   
+
+   return arr;
+}
+
 
 /* ESERCIZIO 15
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+let arrElements7 = millenniumMovies();
 
-/* ESERCIZIO 16
+console.log(arrElements7);
+
+function millenniumMovies(){
+
+   let arr = [];
+   let index = 0;
+
+   for(movie of movies){
+
+      if(movie.Year >= 2000){
+
+         arr[index] = movie.Title;
+
+         index++;
+      }
+   }
+
+   return arr;
+}
+
+
+/* ESERCIZIO 16 --------------------------------------------------------------------------------
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+
 
 /* ESERCIZIO 17
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+let arrElements8 = sumYear(movies);
 
-/* ESERCIZIO 18 (EXTRA)
-  Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
+console.log(arrElements8);
+
+function sumYear(){
+
+   let sum = 0;
+
+   for(movie of movies){
+
+      sum += parseInt(movie.Year);
+   }
+
+   return sum;
+}
+
+/* ESERCIZIO 18 (EXTRA) ------------------------------------------------------------------------
+  Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita. Rings
 */
+// let arrayElements9 = searchString(movies);
+
+// console.log(arrayElements9);
+
+// function searchString(){
+
+//    for(movie of movies){
+
+//       movie
+//    }
+// }
+
+// function check(string){
+//    return string = Rings;
+// }
