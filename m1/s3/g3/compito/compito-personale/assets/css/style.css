@@ -1,0 +1,18 @@
+*{
+   box-sizing: border-box;
+}
+.container {
+   max-width: 500px;
+   margin: 0 auto;
+   background-color: #eee;
+}
+.flex{
+   display: flex;
+   width: 100%;
+}
+.container input{
+   width: 80%;
+}
+.container button{
+   width: 20%;
+}

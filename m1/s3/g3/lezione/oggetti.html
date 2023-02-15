@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      body{background-color: #ccc;}
+   </style>
+</head>
+<body>
+
+   <script>
+
+      {
+         /**
+          * Creazione di oggetti manualmente
+         */
+         let margherita = {
+            gusto: "Margherita",
+            prezzo: 5,
+            disponibile: true,
+            mostraPrezzo: function(){
+               console.log(`Il prezzo della pizza margherita è di 5euro`);
+            }
+            // potrei sostituire la funzione anonima con la function arrow ma a quel punto la keyword this si aggancerebbe all'oggetto window: mostraPrezzo: () => {...}
+         }
+
+      //   class e un costrutto che ci serve a prog ad oggetti e che ci serve se istanziato a creare oggetti
+
+         let diavola = {
+            gusto: "Diavola",
+            prezzo: 1,
+            disponibile: true,
+            // la funzione anonima all'interno del metodo mostraPrezzo la posso sostituire con la funzione arrow
+            // mostraPrezzo: function(){
+            //    console.log('Il prezzo della pizza margherita è di 5euro');
+            // }
+            mostraPrezzo: () => {
+               console.log('Il prezzo della pizza diavola è di 1euro');
+            }
+         }
+
+         margherita.mostraPrezzo();
+         diavola.mostraPrezzo();
+
+      //   un costruttore di oggetti è una funzione con all'interno le istruzioni per costruire l'oggetto che vogliamo
+      function Pizza(){
+
+      }
+
+      }
+   </script>
+   
+</body>
+</html>
