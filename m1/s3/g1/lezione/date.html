@@ -13,8 +13,45 @@
       /**
        * JS gestisce le date attraverso l'oggetto Date, di default ritorna la data attuale del browser
       */
-      var data = new Date();
-      console.log(data);
+      var now = new Date(); // scrivo nella variabile un oggetto date, contenente le info relative a data ed ora attuali
+      console.log(now);
+      
+      // metodi per la lettura
+      let year = now.getFullYear(); //=> 2023
+      let month = now.getMonth();   //=> da zero a 11
+      let weekDay = now.getDay();   //=> il numero del giorno della settimana, numeri da 0 a 6 e ricorda che inizia a contare con la domenica
+      let day = now.getDate();      //=> il giorno del mese
+      
+      console.log(new Date().getTime()); //=> mi restituisce i millisecondi trascorsi dal 01/01/1970
+      
+      console.log(year, month, day, weekDay);
+
+      now.setDate(23); //=> imposto un giorno del mese a mio piacere
+      now.setMonth(-1); 
+      //=> se lo imposto a 11 mi restituisce dicembre 2023
+      //=> se però scrivo 12 passa a gennaio 2024
+      //=> se scrivessi 0 punterei gennaio 2023
+      //=> mentre se scrivessi -1 dicembre 2022
+
+      console.log(now);
+
+      console.log(now.toLocaleDateString()); //=> restituisce la data nel formato del paese in cui è settato il browser, se ho il browser con impostazioni americane allora restituisce la formattazione USA
+
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      console.log(now.toLocaleDateString('it-IT', options)); //=> venerdì 23 dicembre 2022
+
+      /**
+       * ------------------------------------------------------------------------------------------------- *
+       * Per app che fanno ampio utilizzo di date e orari si consiglia l'utilizzo della libreria moment.js *
+       * ------------------------------------------------------------------------------------------------- *
+      */
+
+      
+
+
+
+
+      // Una classe è una struttura che ci permette di generare un'istanza di un oggetto, per convenzione sia le classi che i costruttori andremo sempre a nominarli con la prima lettera maiuscola. Questo ci permette di capire quando una funzione è una classe che ci permetterà di istanziare degli oggetti
    </script>
    
 </body>
