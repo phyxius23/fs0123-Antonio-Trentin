@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Object</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * Dichiarazione di un Object
+       * un object può avere proprietà infinite
+       */
+      let obj = {
+         proprieta: 'prova',
+         objFiglio: {
+            objFiglio: {
+               valore: true
+            },
+            arrayFiglio: [
+               1,
+               2,
+               3,
+               {
+                  primoNumero: 1,
+                  secondoNumero: 2
+               }
+            ]
+         }
+      }
+
+      // leggere una proprietà
+      console.log(obj.proprieta);
+
+      // sovrascrivere il valore di una proprietà
+      obj.proprieta = 'prova2';
+
+      // console.log della prop valore riga 21
+      console.log(obj.objFiglio.objFiglio.valore);
+
+      // console.log del secondo valore dell'arrayFiglio
+      console.log(obj.objFiglio.arrayFiglio[1]);
+
+      // console.log della prop secondoNumero
+      console.log(obj.objFiglio.arrayFiglio[3].secondoNumero);
+
+      // esempio oggetto con sintassi "anomale"
+      let objStrano = {
+         0:  'valore',
+         1:  'valore',
+         "due parole": 'ciao'
+      }
+      objStrano['due parole'];
+
+      // lettura array
+      let arrElements = [
+         1,
+         3,
+         6,
+         {
+            val1: 7,
+            val2: 10,
+            valArr: [7,8,9]
+         },
+         ['a','b','c',['Hello','World!']]
+      ];
+
+      // leggere valore 6
+      console.log(arrElements[2]);
+
+      // leggere valore 10
+      console.log(arrElements[3].val2);
+
+      // leggere valore 8
+      console.log(arrElements[3].valArr[1]);
+
+      // leggere parola "word"
+      console.log(arrElements[4][3][1]);
+
+      // costruttore di oggetti => è una funzione parametrica 
+      function Pizza(_gusto, _prezzo){
+         this.gusto = _gusto;
+         this.prezzo = _prezzo;
+      }
+      let diavola = new Pizza('Diavola', 1); //=> la keyword new in JS viene usato soltanto per creare una nuova istanza di un oggetto
+      let margherita = new Pizza('Margherita', 4);
+      console.log(diavola, margherita);
+
+
+
+
+
+   </script>
+   
+</body>
+</html>
