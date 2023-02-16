@@ -8,6 +8,8 @@
 </head>
 <body>
 
+   <div id="ora"></div>
+
    <script>
 
       /**
@@ -46,8 +48,48 @@
        * ------------------------------------------------------------------------------------------------- *
       */
 
-      
+      /**
+       * setTimeout e setInterval
+       * -------------------------------------------------------------------------------------------------
+       * sono delle funzioni di javascript che ritardano l'esecuzione di una funzione oppure la ripetono ogni TOT millesecondi
+       */
 
+      // eseguo la funzione 1 volta dopo 3 secondi (3000(ms))
+      setTimeout(function(){
+         console.log(new Date());
+      }, 3000); //una funzione passata come argomento di un'altra funzione si chiama callback
+
+      // eseguo una funzione all'infinito ogni secondo
+      // setInterval(function(){
+      //    console.log(new Date());
+      // }, 1000);
+
+      setInterval(function(){
+         
+         let tag = document.querySelector('#ora');
+         let orario = new Date().toLocaleTimeString();
+
+         tag.textContent = orario;
+
+      }, 1000);
+
+      // una particolarità di setInterval() è la possibilità di stoppare l'esecuzione della funzione stessa grazie all'utilizzo della funzione clearInterval()
+      let count = 10;
+      let timer = setInterval(function(){
+
+         console.log(count);                 // mostro il valore di count
+         if(count == 0){
+            clearInterval(timer)             // fermo il timer
+         }
+         count--;                            // riduco count di 1
+      }, 1000);
+
+      // creare date future
+      let dateNow = new Date();
+
+      dateNow.setMonth(dateNow.getMonth() + 1);      // ad un mese da oggi
+
+      console.log(dateNow);
 
 
 
