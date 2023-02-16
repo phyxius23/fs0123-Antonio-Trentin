@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EventListener</title>
+
+   <style>
+      .quadrato{
+         width: 50px;
+         height: 50px;
+         border: 1px solid #000;
+      }
+      .cerchio{
+         width: 50px;
+         height: 50px;
+         border: 1px solid #008080;
+         border-radius: 100%;
+      }
+   </style>
+</head>
+<body>
+   
+   <div class="quadrato" onclick="colora(this)"></div>
+   <div class="quadrato" onclick="colora(this)"></div>
+   <div class="quadrato" onclick="colora(this)"></div>
+   <div class="quadrato" onclick="colora(this)"></div>
+   <div class="quadrato" onclick="colora(this)"></div>
+
+   <div data-colore="red" class="cerchio"></div>
+   <div data-colore="yellow" class="cerchio"></div>
+   <div data-colore="green" class="cerchio"></div>
+   <div data-colore="purple" class="cerchio"></div>
+   <div data-colore="pink" class="cerchio"></div>
+
+   <script>
+
+      /**
+       * ONCLICK
+      */
+      function colora(el){
+         el.style.backgroundColor = '#39f';
+      }
+      
+
+      /**
+       * EVENTLISTENER
+      */
+      let cerchi = document.querySelectorAll('.cerchio'); //=> restituisce un array
+      
+      for(cerchio of cerchi){
+         cerchio.addEventListener('click', function(){
+            
+            let colore = this.getAttribute('data-colore');
+            
+            this.style.backgroundColor = colore;
+         });
+      }
+
+   </script>
+</body>
+</html>

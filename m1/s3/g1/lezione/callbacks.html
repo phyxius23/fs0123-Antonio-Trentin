@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Callback</title>
+</head>
+<body>
+
+   <div id="output"></div>
+
+   <script>
+
+      /**
+       * CALLBACKS
+       * E' una funzione che viene richiamata da un'altra funzione
+       * Buona parte dei metodi degli array hanno una callback
+       * 
+       * IMPORTANTE:
+       * Il callback hell è un codice altamente illegibile causato dall'eccesso di callback,tipo una che richiama l'altra
+      */
+      let grassetto = testo => `<b>${testo}</b>`;
+      let corsivo = testo => `<i>${testo}</i>`;
+
+      function scrivi(testo, fnCallback){
+         let output = document.querySelector('#output');
+
+         output.innerHTML += fnCallback(testo);
+      }
+
+      scrivi('Hello World', grassetto);
+      scrivi('Hello World', corsivo);
+      scrivi('Hello World', (testo) => {
+         return `<hr> ${testo} <hr>`;
+      });
+
+   </script>
+   
+</body>
+</html>
