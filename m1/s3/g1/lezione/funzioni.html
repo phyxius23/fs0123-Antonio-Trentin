@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function()</title>
+</head>
+<body>
+
+   <script>
+      /**
+       * FUNZIONI
+       */
+      function saluto(){
+         console.log('Ciao');         
+      }
+      saluto(); // lancio la funzione
+
+      function restituisciSaluto(){
+         return 'benvenuto';         
+      }
+      let dato = restituisciSaluto();
+      console.log(dato);
+
+
+      /**
+       * FUNZIONI PARAMETRICHE
+       */
+      function somma(parametroA, parametroB){
+         console.log(parametroA + parametroB);
+      }
+      somma(2,8);
+      somma(); // se non passo nessun parametro alla funzione mi ritornerà NaN, questo perchè i parametri non valorizzati saranno impostati come undefined
+
+      // gestione dei parametri mancanti
+      // imposto un valore di default ai parametri
+      function sommaPlus(a = 0, b = 0, c = 0){
+         console.log(a + b + c);
+      }
+      sommaPlus(2,4);
+      sommaPlus(2,4,6);
+
+
+      /**
+       * CLOSURES
+       */
+      function closure(){
+
+         let numero = 10;
+
+         function fnFiglia(){
+            return numero * 2;            
+         }
+
+         return fnFiglia();
+      }
+      console.log(closure());
+
+
+      /**
+       * ----------------------------------------------------------------------------------------------------- *
+       * IMPORTANTE:                                                                                           *
+       * le funzioni possono leggere le variabili globali che stanno al suo esterno, mentre le                 *
+       * variabili che nascono all'interno della funzione non possono essere lette all'esterno della funzione  *
+       * ----------------------------------------------------------------------------------------------------- *
+       */
+
+      /**
+       * SELF INVOKING FUNCTION (funzioni che si auto invocano)
+       */
+      // (function(){
+      //    console.log('Auto invocata');    //=> questa funzione scritta così non si sta invocando
+      // })
+      (function(){
+         console.log('Auto invocata');    //=> scritta così con le parentesi aperte/chiuse alla fine si auto invoca
+      })()
+
+      let d = (function(){
+         return 'Valore restituito dalla self invoking function';
+      })()
+      console.log(d);
+
+
+      /**
+       * ARROW FUNCTION
+       * Sono le funzioni anonime viste fino ad oggi soltanto in versione ristretta
+       * --------------------------------------------------------------------------
+       * In JS posso creare una funzione anonima e poi utilizzarla in vari modi:
+       * 1) le posso passare come parametro ad un'altra funzione 
+       * 2) le posso utilizzare per un auto invocazione 
+       * 3)le posso inserire in una variabile, questa poi mi permetterà di invocare la funzione
+       */
+      // let nomeFunzione = function(){...}           //=> questa è una classica funzione anonima inserita in una variabile
+
+      let nomeFunzione = () => {
+         console.log('function arrow eseguita');   //=> la stessa vista sopra ma con l'utilizzo dell'arrow function
+      }
+      nomeFunzione(); //=> questa variabile non contiene una stringa, un oggetto o altro ma una funzione quindi per richiamare tale funzione mi basterà richiamare il nome della funzione seguito dalle parentesi tonde
+
+      // Esempio di function arrow oneline (su un'unica riga)
+      // Se è possibile scriverla su un'unica riga posso eliminare le parentesi graffe, la mancanza di queste mi obbliga ad eliminare il return(se lo metto mi segnala errore), un'altra cosa da dire è che con un solo parametro passato alla funzione le tonde sono facoltative
+      let grassetto = (stringa) => `<b>${stringa}</b>`; 
+
+      // con più di un parametro le tonde sono obbligatorie
+      let sommaFreccia = (a,b) => a + b;
+      console.log(sommaFreccia(3,73));
+
+
+      /**
+       * SPREAD OPERATOR SULLE FUNZIONI
+       * L'operatore di spread mi tratta tutti i numeri prendendoli e mettendoli dentro ad un array
+       */
+      let sommaProUltra = (...numeri) => {  //=> mette tutti gli argomenti in un array chiamato numeri 
+         let somma = 0;     //=> i tre puntini ... sono lo spread operator
+         
+         for(let n of numeri){
+            somma += n;
+         }
+         return somma;
+      }
+      console.log(sommaProUltra(1, 50, 90, 700));  //=> lanciando la funzione tutti i valori che passo alla funzione andranno salvati in un array chiamato numeri
+
+      // ora ripropongo la funzione sopra in un'unica riga
+      let sommaProUltraOneLine = (...numeri) => numeri.reduce((prev, next)=> prev + next)
+      console.log(sommaProUltraOneLine(1, 50, 90, 700));
+
+   </script>
+   
+</body>
+</html>
