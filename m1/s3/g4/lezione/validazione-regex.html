@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Validazione</title>
+</head>
+<body>
+
+   <!-- Creazione di un form -->
+   <!-- action: dirà ad html dove inviare i dati / i frontendendisti non lo usano -->
+   <!-- method: ci sono due modalità di invio dei dati GET e POST. 
+         GET si utilizza se abbiamo bisogno di leggere i params (devo cercare che ha detto )
+         POST fa un invio di dati senza sporcare l'indirizzo
+      -->
+   <form id="mioForm">
+
+      <div>
+            <input type="text" id="nome" class="notEmpty" placeholder="Nome">
+            <span class="error"></span>
+      </div>
+      <div>
+            <input type="text" id="cognome" placeholder="Cognome">
+            <span class="error"></span>
+      </div>
+      <div>
+            <input type="text" id="email" class="notEmpty" placeholder="Email" required>
+            <span class="error"></span>
+      </div>
+      <div>
+            <input type="password" id="password" class="notEmpty" placeholder="Password">
+            <span class="error"></span>
+      </div>
+      <button type="button" id="show">Mostra/nascondi</button>
+
+      <button id="send">Iscriviti</button>
+   </form>
+
+
+   <script>
+
+      /**
+       * Creazione di un form validato da Javascript
+       * --------------------------------------------------------------------
+       * Javascript blocca l'invio dei dati, li valida JS e li invia lui dopo la validzione
+       */
+
+      let formBtn = document.getElementById("send");
+
+      formBtn.addEventListener('click', function (e) {
+
+         e.preventDefault();
+
+         let nome = document.getElementById('nome');
+         let cognome = document.getElementById('cognome');
+         let email = document.getElementById('email');
+         let password = document.getElementById('password');
+
+         console.log(nome.checkValidity());
+         console.log(cognome.checkValidity());
+         console.log(email.checkValidity());
+         console.log(password.checkValidity());
+      })
+
+      let show = document.getElementById("show");
+      show.addEventListener('click', function (e) {
+         let password = document.getElementById('password');
+         password.type = (password.type == 'password') ? 'text' : 'password';
+      })
+   </script>
+   
+</body>
+</html>
