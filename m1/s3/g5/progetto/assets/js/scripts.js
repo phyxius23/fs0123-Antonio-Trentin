@@ -270,7 +270,7 @@ function howManyDays(varData) {
 
    return differenzaGiorni;
 }
-console.log(howManyDays('2010/05/25'));
+console.log(howManyDays('2010/05/22'));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
