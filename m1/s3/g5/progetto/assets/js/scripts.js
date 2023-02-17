@@ -265,10 +265,10 @@ console.log(rollTheDices(2));
 function howManyDays(varData) {
    let tripleteDate = Date.parse(varData);
    let todayDate = Date.now();
-   let diffMis = todayDate - tripleteDate;
-   let diffInDays = Math.floor(diffInMs / 86400000);
+   let differenzaMilSecondi = todayDate - tripleteDate;
+   let differenzaGiorni = Math.floor(differenzaMilSecondi / 86400000);
 
-   return diffInDays;
+   return differenzaGiorni;
 }
 console.log(howManyDays('2010/05/25'));
 
@@ -280,9 +280,6 @@ function isTodayMyBirthday(){
    let birthdayDate = new Date('2023-02-17').toLocaleDateString();
 
    return todayDate === birthdayDate ? true : false;
-
-   console.log(todayDate);
-   console.log(birthdayDate);
 }
 console.log(isTodayMyBirthday());
 
