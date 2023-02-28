@@ -10,8 +10,6 @@
    
    <script>
 
-      // S3G2 VIDEO - h 2.09.00
-
       /**
        * indexOf()
        * cerca una stringa: se la trova restituisce l'indice iniziale in cui si trova, in caso negativo 
@@ -27,7 +25,7 @@
 
       /**
        * lastIndexOf()
-       * cerca una stringa: se la trova restituisce l'indice iniziale in cui si trova però dell'eventuale
+       * cerca una stringa: se la trova restituisce l'indice iniziale in cui si trova però l'eventuale
        * ultima occorenza, in caso negativo ritorna -1. 
        * accetta un secondo parametro che indica eventualmente da quale indice iniziare la ricerca
        * N.B. è case sensitive
@@ -35,6 +33,127 @@
 
       console.log(stringa.lastIndexOf('molto'));
       console.log(stringa.lastIndexOf('Molto')); 
+
+      /**
+       * length
+       * non è un metodo ma una proprietà, permette di ottenere la lunghezza (intesa come numeri di 
+       * caratteri) della stringa
+       */
+
+       console.log(stringa.length);
+
+      /** 
+       * slice()
+       * estrae un pezzo della stringa e la ritorna come nuova stringa senza modificare l'originale
+       */
+
+      // stringa.slice(indexStart)
+      // se con un solo parametro estrae dalla posizione indicata fino alla fine della stringa
+      console.log(stringa.slice(9)); 
+      
+      // stringa.slice(indexStart, indexEnd)
+      // se con due parametri estrae dall'indice del primo all'indice del secondo escluso
+      console.log(stringa.slice(9, 14)); 
+      
+      // se con numeri negativi si inizia a contare gli indici dalla fine
+      console.log(stringa.slice(-6, -4)); 
+
+      /** 
+       * substring()
+       * ha la stessa funzionalità di slice() con l'unica differenza che non accetta parametri negativi
+       */
+
+      // stringa.substring(indexStart)
+      // se con un solo parametro estrae dalla posizione indicata fino alla fine della stringa
+      console.log(stringa.substring(9)); 
+      
+      // stringa.substring(indexStart, indexEnd)
+      // se con due parametri estrae dall'indice del primo all'indice del secondo escluso
+      console.log(stringa.substring(9, 14)); 
+      
+      /** 
+       * substr()
+       * ha la stessa funzionalità di slice() con l'unica differenza che il secondo parametro indica
+       * il numero di elementi da eliminare
+       */
+
+      // stringa.substr(indexStart)
+      // se con un solo parametro estrae dalla posizione indicata fino alla fine della stringa
+      console.log(stringa.substr(9)); 
+      
+      // stringa.substr(indexStart, length)
+      // se con due parametri estrae dall'indice del primo il numero di elementi dichiarati nel secondo parametro 
+      console.log(stringa.substr(9, 3)); 
+
+      /** 
+       * replace()
+       * permette di cercare una stringa e se trovata sostituirla con un'altra, esegue questa operazione solo con la prima occorrenza, dovessero essere presenti più stringhe contenent la serie di caratteri da cercare dovremo usare replaceAll(): è case sensitive
+       */
+
+       let testo = 'Lorem ipsum dolor sit amet###';
+
+      // replace sostituisce solo la prima corrispondenza
+      console.log(testo.replace('#',''));
+
+      // replaceAll() sostituisce tutte le corrispondenze
+      // console.log(testo.replaceAll('#',''));
+
+      // replace accetta anche regex, queste sono delle espressioni di caratteri checi permettono di fare delle ricerche estremamente precise per riconoscere determinate stringhe, si può fare una regex che risonosce una email
+      // la regex che indica g sostituisce tutte le corrispondenze trovtae
+      console.log(testo.replace(/#/g, ''));
+
+      // posso usare le regex per cercare e sostituire dei caratteri in modalità case insensitive, questo posso farlo alla regex che indica i
+      console.log(testo.replace(/L/i,''));
+
+      /** 
+       * concat()
+       * permette di concatenare due stringhe, forse meglio usare l'operatore "+": stringa = stringa1 + stringa2
+       */
+      console.log(testo.concat(testo));
+
+      /** 
+       * trim()
+       * permette di eliminare eventuali spazi vuoti posizionati all'inizio e/o alla fine della stringa
+       */
+
+      testo = '     Lorem ipsum dolor sit amet###   ';
+
+      console.log(testo.trim());
+
+      /** 
+       * charAT()
+       * permette di indicare un carattere posizionato all'indice indicato
+       */
+
+      testo = 'Lorem ipsum dolor sit amet###';
+
+      console.log(testo.charAt(1));
+
+      /** 
+       * split()
+       * permette di convertire una stringa in un array senza modificare la stringa originale
+       */
+
+      let csv = 'mario,rossi,30';
+
+      // lasciando vuoto all'interno dei singoli apici separa in corrispondenza di ogni carattere
+      console.log(csv.split(''));
+      
+      // scrivendo una virgola all'interno dei singoli apici separa in corrispondenza delle virgole
+      console.log(csv.split(','));
+
+      /** 
+       * join()
+       * permette di convertire un array in una stringa (senza modificare la stringa originale) se ho degli oggetti mi dara errore
+       */
+
+      let dati = ['Mario','Rossi',30];
+
+      // se non indico un argomento unisce usando la virgola
+      console.log(dati.join());
+      
+      // posso passare come argomento (p.es.) un carattere che verrà usato al posto della virgola
+      console.log(dati.join('+'));
 
 
    </script>

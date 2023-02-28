@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+</head>
+<body>
+
+   <div id="prova"></div>
+   <div class="quadrato"></div>
+
+   <div id="area1">
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+   </div>
+
+   <div id="area2">
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+      <div class="blocco"></div>
+   </div>
+
+   <script>
+
+      /**
+       * Qualsiasi elemento di HTML può essere selezionato e manipolato in JS.
+       * Proprietà e metodi di JS possono essere applicati ad ogni elemento HTML.
+       */
+
+      /** 
+       * Vecchi Selettori
+       * ------------------------------
+       */
+
+      // restituisce (sempre) un solo elemento in base alla ricerca del suo id: più performante (più veloce)
+      document.getElementById('prova');
+
+      // restituisce sempre una lista (anche se di classe quadrato ne esiste solo una) non ciclabile con i metodi degli array
+      document.getElementsByClassName('quadrato');
+      
+      // restituisce sempre una lista (anche se di classe quadrato ne esiste solo una) non ciclabile con i metodi degli array
+      document.getElementsByTagName('div');
+
+      // per ottenere un array ciclabile dovrei fare così:
+      let listaCiclabile = Array.from(document.getElementsByClassName('quadrato'));
+      
+
+      /** 
+       * Nuovi Selettori
+       * ------------------------------
+       */
+
+      // restituisce sempre un solo elemento (null se non trova nulla), solo il primo nel caso ce ne sia più di uno che rispetta la query
+      document.querySelector('#prova'); // qui potrà esser solo uno dato che gli id per natura sono univoci
+      document.querySelector('.quadrato'); // il primo elemento con la classe quadrato
+
+      // restituisce sempre un array (vuoto se non trova nulla)
+      document.querySelectorAll('.quadrato'); // tutti gli elementi con la classe quadrato
+
+      // N.B.: FUNZIONANO CON QUALSIASI QUERY DI CSS (elementi, id, classi)
+
+
+      /** 
+       * Esempi
+       * ------------------------------
+       */
+
+      // Esempio nr. 1
+      document.querySelectorAll('#area1 .blocco'); // tutti gli elementi .blocco figli di #area1
+      
+      // Esempio nr. 2
+      let area1 = document.querySelectorAll('#area1'); // seleziono il blocco #area1
+      area1.querySelectorAll('.blocco'); // seleziono tutti gli elementi .blocco nell'elemento selezionato
+
+      
+
+   </script>
+
+   
+</body>
+</html>
