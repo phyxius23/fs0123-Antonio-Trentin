@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ripasso Array</title>
+</head>
+<body>
+
+   <script>
+
+      /**
+       * Object
+       * -------------------------------------------------------
+       */
+      
+      // Operatore Spread
+      let position = {
+         x: 0,
+         y: 0
+      };
+      let dimensions = {
+         width: 100,
+         height: 75
+      };
+      let rect = {...position, ...dimensions};
+      console.log(rect);
+
+      /**
+       * Array
+       * -------------------------------------------------------
+       */
+      
+      // definizione di un array
+      let array = []; 
+
+      // così capisco se un array è vuoto o no
+      console.log(array.length); 
+
+      let arr = [1,2,3,4,5].map(n => n * 2); // 2,4,6,8,10
+
+      // length mostra la lunghezza di un array oppure di una stringa
+      console.log('parola'.length);
+
+      // lettura
+      let pizze = ['Margherita', 'Diavola', 'Marinara'];
+
+      console.log(pizze[1]);
+      
+      // sostituire un valore con un altro
+      pizze[2] = 'Capricciosa;'
+      
+      // se interrogo un array con indice non dichiarato mi resituisce undefined
+      console.log(pizze[3]);
+
+      // ordinamento con sort() => modifica l'originale
+      console.log(pizze.sort());
+
+      /** 
+       * Metodo pop()
+       * elimina l'ultimo elemento e permette di salvarlo
+       */
+
+      // eliminare un elemento dalla fine di un array
+      let lettere = ['a','b','c','d','e','f','g','h','i'];
+
+      let eliminato = lettere.pop();
+
+      console.log(lettere, eliminato); 
+      
+      /** 
+       * Metodo push()
+       * aggiunge un elemento alla fine dell'array e permette di salvare la q.tà di elementi contenuti nell'array
+       */
+
+      // push() aggiungo un elemento alla fine dell'array e posso salvare la q.tà di elementi contenuti nell'array
+      let quantityEnd = lettere.push('#');
+      
+      console.log(lettere, quantityEnd); 
+
+      /** 
+       * Metodo shift()
+       * elimina un elemento dall'inizio di un array e salva l'elemento eliminato in una nuova variabile
+       */
+
+      lettere = ['a','b','c','d','e','f','g','h','i'];
+
+      let eliminatoInizio = lettere.shift();
+
+      console.log(lettere, eliminatoInizio);
+
+      /** 
+       * Metodo unshift()
+       * aggiunge un elemento all'inizio dell'array e permette di salvare la q.tà di elementi contenuti nell'array
+       */
+
+      let quantityStart = lettere.unshift('#');
+      
+      console.log(lettere, quantityStart); 
+
+      // delete permette di cancellare un elemento dell'array ma indicizza nuovamente l'array pertanto lascia dei buchi al suo interno
+      
+      // --------------------------------------------------------------------------------------------
+
+      /**
+       * Splice
+       * permette di eliminare o aggiungere degli elementi, il primo parametro all'interno delle 
+       * parentesi indicano l'indice da cui iniziare ad eseguire le operazioni successive, il secondo 
+       * parametro indica la quantità di elementi da eliminare, il terzo e oltre gli elementi da 
+       * inserire a partire dall'indice.  
+       */
+
+      // esempio di eliminazione dato un indice e la quantità di elementi da eliminare
+      lettere = ['a','b','c','d','e','f','g','h','i'];
+
+      let indice = 0; //da dove inizio ad eliminare
+      let qty = 4; //quanti ne elimino
+
+      let eliminati = lettere.splice(indice, qty);
+
+      console.log(lettere, eliminati);
+
+      // --------------------------------------------------------------------------------------------
+      
+      // eliminazione di un elemento (par. nr2) a partire dall'indice 2 (par. nr1), al posto dell'elemento eliminato posiziono ### (par. nr3)
+      lettere = ['a','b','c','d','e','f','g','h','i'];
+      
+      lettere.splice(2, 1, '###'); //=> posso eliminare 10 elementi ma posso inserire solo un valore
+      
+      console.log(lettere);
+      
+      // --------------------------------------------------------------------------------------------
+
+      /** 
+       * Metodo concat()
+       * permette di concatenare due array
+       */
+
+      let lettere1 = ['a','b','c','d'];
+      let lettere2 = ['e','f','g','h'];
+
+      let lettere3 = lettere1.concat(lettere2);
+      let lettere4 = lettere2.concat(lettere1);
+      let lettereDuplicato = lettere1.concat(lettere1);
+
+      console.log(lettere3, lettere4);
+
+      // con operatore di spred
+      let lettereSpread = [...lettere1, ...lettere2];
+
+      console.log(lettereSpread);
+
+      // assegnamento in destrutturazione
+      pizze = ['Margherita', 'Diavola', 'Marinara'];
+
+      let [margherita, diavola, marinara] = pizze;
+
+      console.log(margherita, diavola, marinara);
+
+      // per fare una copia di un array posso utilizzare due modalità
+      let auto = ['Mazda', 'Toyota', 'Volkswagen', 'Seat', 'Mercedes'];
+
+      // Array.from()
+      let autoFrom = Array.from(auto);
+
+      // operatore spread
+      let autoSpread = [...auto];
+
+      console.log(auto, autoFrom, autoSpread);
+
+      /** 
+       * Metodo slice()
+       * ritorna gli elementi selezionati in un nuovo array senza modificare l'originale
+       */
+
+      auto = ['Mazda', 'Toyota', 'Volkswagen', 'Seat', 'Mercedes'];
+
+      let autoSlice = auto.slice(1,3);
+
+      console.log(auto, autoSlice);
+
+   </script>
+   
+</body>
+</html>

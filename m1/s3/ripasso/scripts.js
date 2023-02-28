@@ -160,3 +160,78 @@ console.log(arr[1]);
  * 
  */
 
+/* ESERCIZIO 28 ----------------------------------------------------------------------------------------------------------------------------------
+  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
+
+  Esempio:
+  tree(3)
+
+  *
+ ***
+*****
+
+*/
+
+function halfTree2(varNumber){
+   let counter = 0;
+   
+   for(let i = 1; i <= varNumber; i++){
+      let asterisco = '';
+      counter++;
+      for(let g = 1; g <= i; g++){
+         asterisco += '*';
+      }
+      console.log(asterisco)
+   }
+}
+halfTree2(4);
+
+function halfTree(varNumber){
+   
+   for(let i = 1; i <= varNumber; i++){
+
+      let asterisco = '';
+
+      for(let g = 1; g <= i; g++){
+
+         asterisco += '*';
+      }
+
+      console.log(asterisco)
+   }
+}
+halfTree(4);
+
+function tree(varNumber){
+   
+   for(let i = 1; i <= varNumber; i = i +2){
+
+      let asterisco = '';
+      let spazio = '';
+
+      for(let indexSpace = 0; indexSpace <= ((varNumber-i)/2); indexSpace = indexSpace + 2){
+
+         spazio += 'O';
+      }
+
+      for(let indexAsterisk = 1; indexAsterisk <= varNumber; indexAsterisk = indexAsterisk +2){
+
+         asterisco += '*';
+      }
+
+
+
+
+      console.log(spazio + asterisco)
+   }
+}
+tree(7);
+
+// function tree2(varNumber){
+
+//    for(let i = 1; i <= varNumber; i=i+2){
+
+//       console.log("*");
+//    }
+// }
+// tree2(3);

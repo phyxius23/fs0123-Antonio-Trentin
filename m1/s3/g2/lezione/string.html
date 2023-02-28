@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ripasso String</title>
+</head>
+<body>
+   
+   <script>
+
+      /**
+       * indexOf()
+       * cerca una stringa: se la trova restituisce l'indice iniziale in cui si trova, in caso negativo 
+       * ritorna -1.
+       * accetta un secondo parametro che indica eventualmente da quale indice iniziare la ricerca
+       * N.B. è case sensitive
+       */
+
+      let stringa = 'Ci manca molto il CSS molto';
+
+      console.log(stringa.indexOf('molto'));
+      console.log(stringa.indexOf('Molto')); 
+
+      /**
+       * lastIndexOf()
+       * cerca una stringa: se la trova restituisce l'indice iniziale in cui si trova però dell'eventuale
+       * ultima occorenza, in caso negativo ritorna -1. 
+       * accetta un secondo parametro che indica eventualmente da quale indice iniziare la ricerca
+       * N.B. è case sensitive
+       */
+
+      console.log(stringa.lastIndexOf('molto'));
+      console.log(stringa.lastIndexOf('Molto')); 
+
+
+   </script>
+</body>
+</html>
