@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Object</title>
+   </head>
+   <body>
+      <script>
+         /**
+          * In JS ogni elemento può essere un oggetto: cariabile, array, date, stringhe, espressioni
+          * matematiche.
+          * Gli attributi principali degli oggetti sono:
+          * 1. Proprietà, cioè le caratteristiche possedute e che definiscono gli elementi dell'oggetto
+          * 2. Metodi, cioè funzioni che possono essere svolte dall'oggetto
+          *
+          */
+
+         // Le proprietà sono definite dai nomi associati ai valori
+         let pet = {
+            specie: "gatto",
+            nome: "Tigro",
+         }; //=> specie e nome sono due proprietà dell'oggetto pet
+
+         // Il metodo definito da una funzione anonima è parte integrante dell'oggetto
+         pet = {
+            specie: "gatto",
+            nome: "Tigro",
+            tipo: function () {
+               return this.specie + this.nome;
+            },
+         }; //=> this all'interno di un oggetto si riferisce all'oggetto stesso
+
+         /**
+          * Creazione di oggetti manualmente
+          */
+         let margherita = {
+            gusto: "Margherita",
+            prezzo: 5,
+            disponibile: true,
+            mostraPrezzo: () => {
+               console.log(`Il prezzo della pizza Margherita è di 5€`);
+            },
+         };
+
+         let diavola = {
+            gusto: "Diavola",
+            prezzo: 1,
+            disponibile: true,
+            mostraPrezzo: () => {
+               console.log(`Il prezzo della pizza Diavola è di 1€`);
+            },
+         };
+
+         // let margherita = {
+         //    gusto: "Margherita",
+         //    prezzo: 5,
+         //    disponibile: true,
+         //    mostraPrezzo: () => {
+         //       console.log(`Il prezzo della pizza Margherita è di 5€`);
+         //    },
+         // };
+
+         console.log(margherita); // mi restituisce l'oggetto dichiarato sopra
+
+         // per richiamare il metodo devo agiungere le parentesi () alla fine, altrimenti non funziona
+         margherita.mostraPrezzo();
+
+         //
+         diavola.mostraPrezzo();
+      </script>
+   </body>
+</html>
