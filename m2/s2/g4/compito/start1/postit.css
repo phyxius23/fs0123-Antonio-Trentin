@@ -1,0 +1,89 @@
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   font-family: 'Indie Flower', cursive;
+   background-color: grey;
+}
+.container {
+   max-width: 900px;
+   margin-inline: auto;
+   display: flex;
+   gap: 40px;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   height: 70vh;
+}
+.card {
+   width: calc(25% - 30px);
+   padding: 3rem;
+   background-color: antiquewhite;
+   text-align: center;
+   box-shadow: 0 0 30px 10px rgba(0,0,0,0.3);
+}
+.card p:first-of-type {
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+.bg-yellow {
+   background-color: #f8f8c6;
+   transform: rotate(-8deg);
+}
+.bg-yellow:hover {
+   animation: rotationYellow .5s linear forwards;
+}
+.bg-green:hover {
+   animation: rotationGreen .5s linear forwards;
+}
+.bg-violet:hover {
+   animation: rotationViolet .5s linear forwards;
+}
+.bg-green {
+   background-color: #c9fbca;
+   transform: rotate(14deg);
+}
+.bg-violet {
+   background-color: #c9c9fa;
+   transform: rotate(-14deg);
+}
+
+@keyframes rotationYellow {
+   from {
+      transform: rotate(-8deg) scale(1);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.3);
+      z-index: 0;
+   }
+   to {
+      transform: rotate(0deg) scale(1.3);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.7);
+      z-index: 1;
+   }
+}
+
+@keyframes rotationGreen {
+   from {
+      transform: rotate(-8deg) scale(1);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.3);
+      z-index: 0;
+   }
+   to {
+      transform: rotate(0deg) scale(1.3);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.7);
+      z-index: 1;
+   }
+}
+
+@keyframes rotationViolet {
+   from {
+      transform: rotate(-8deg) scale(1);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.3);
+      z-index: 0;
+   }
+   to {
+      transform: rotate(0deg) scale(1.3);
+      box-shadow: 0 0 30px 10px rgba(0,0,0,0.7);
+      z-index: 1;
+   }
+}
