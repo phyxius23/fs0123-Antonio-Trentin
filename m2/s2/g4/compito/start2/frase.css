@@ -9,15 +9,17 @@
 */
 
 main {
+   font-family: 'Bree Serif', serif;
+   color: rgba(0,0,0,.75);
    max-width: 1200px;
    margin-inline: auto;
    justify-content: center;
    align-items: center;
+   margin-top: 50px;
 }
 #testoAlternato {
-   padding: 1rem 2rem;
-   margin-top: 50px;
-   border: 1px solid red;
+   border: 5px solid rgba(0,0,0,.6);
+   padding: 2rem 4rem;
 }
 #testoAlternato p {
    font-size: 3rem;
@@ -28,7 +30,7 @@ main {
 }
 #testoAlternato p span {
    margin-left: 17px;
-   overflow: hidden;
+   color: #6a889c;
 }
 #testoAlternato p span i {
    position: absolute;
@@ -39,13 +41,14 @@ main {
 }
 #testoAlternato p span i:nth-child(2){
    bottom: 200px;
-   animation: second 1s linear 1s;
+   animation: second 2.5s linear 1s;
 }
 #testoAlternato p span i:last-of-type{
    bottom: 200px;
-   animation: third 1s linear 2s both;
+   animation: third 1s linear 3.5s both;
 }
 
+/* il primo keyframes dura 1s in uscita */
 @keyframes first {
    0% {
       bottom: 0;
@@ -56,12 +59,17 @@ main {
       opacity: 0;
    }
 }
+/* il secondo keyframes dura 1s in entrata, 0.5s di attesa, 1s in uscita */
 @keyframes second {
    0% {
       bottom: 200px;
       opacity: 0;
    }
-   50% {
+   40% {
+      bottom: 0px;
+      opacity: 1;
+   }
+   60% {
       bottom: 0px;
       opacity: 1;
    }
@@ -70,6 +78,7 @@ main {
       opacity: 0;
    }
 }
+/* il terzo keyframes dura 1s in entrata */
 @keyframes third {
    0% {
       bottom: 200px;
