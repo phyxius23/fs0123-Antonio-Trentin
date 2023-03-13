@@ -9,12 +9,22 @@
    <body>
       <script>
          /**
-          * In JS ogni elemento può essere un oggetto: cariabile, array, date, stringhe, espressioni
+          * In JS ogni elemento può essere un oggetto: variabile, array, date, stringhe, espressioni
           * matematiche.
           * Gli attributi principali degli oggetti sono:
           * 1. Proprietà, cioè le caratteristiche possedute e che definiscono gli elementi dell'oggetto
           * 2. Metodi, cioè funzioni che possono essere svolte dall'oggetto
-          *
+          * Esistono diversi modi di creare un oggetto:
+          * 1. Letterali oggetto
+          * 2. Creazione di oggetti con "new"
+          * 3. 
+          */
+
+         /**
+          * Letterali oggetto
+          * ----------------------------------------------------
+          * Un letterale oggetto è un elenco separato da virgole di coppie nome: valore racchiuse tra 
+          * parentesi graffe.
           */
 
          // Le proprietà sono definite dai nomi associati ai valori
@@ -103,8 +113,28 @@
           * Mi permette di creare, anzichè un oggetto alla volta, un sistema per la creazione di oggetti
           * tutti identici.
           * Un costruttore di oggetti in JS è una funzione alla quale viene assegnato un nome e al suo
-          * interno avrà le istruzioni per costruire l'oggetto
+          * interno avrà le istruzioni per costruire l'oggetto (pertanto nell'esempio sotto il costruttore 
+          * dell'oggetto è Pizza).
+          * L'operatore "new" crea e inizializza un nuovo oggetto. La parola riservata "new" deve essere 
+          * seguita da una chiamata di funzione, una funzione usata in questo modo è detta costruttore e 
+          * serve per inizializzare un nuovo oggetto.
+          * Per convenzione costruttore e classe le andiamo a scrivere con la prima lettera maiuscola.
           */
+
+         function Pizza(_gusto, _prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+         }
+
+         let capricciosa = new Pizza('Capricciosa', 5);
+         let viennese = new Pizza('Viennese', 7);
+
+         
+         /**
+          * Classi
+         */
+         
+         
       </script>
    </body>
 </html>
