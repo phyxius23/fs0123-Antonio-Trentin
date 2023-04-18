@@ -1,0 +1,51 @@
+/* 
+ * HOMEPAGE
+ * -------------------------------------------------------------
+ */
+.bg-hero p:last-of-type {
+   font-size: 0.5rem;
+}
+
+.produtcs-container .card {
+   border: unset;
+}
+.produtcs-container .card-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   flex: unset;
+   height: 100%;
+}
+
+
+/* 
+ * BACKOFFICE
+ * -------------------------------------------------------------
+ */
+.backoffice .form-text {
+   display: none;
+}
+
+.backoffice form.validated input:valid,
+.backoffice form.validated textarea:valid {
+   border-color: #0d6efd;
+}
+
+.backoffice form.validated input:invalid,
+.backoffice form.validated textarea:invalid {
+   border-color: #dc3545;
+}
+
+.backoffice form.validated input:invalid+div,
+.backoffice form.validated textarea:invalid+div {
+   display: block;
+}
+
+
+/* 
+ * DETAILS
+ * -------------------------------------------------------------
+ */
+.details .bg-light {
+   background-color: rgba(0,0,0,0.1) !important;
+}
