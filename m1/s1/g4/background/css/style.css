@@ -1,7 +1,7 @@
 .quadrato {
    width: 200px;
    height: 200px;
-   border: 1px solid #000;
+   border: 1px solid red;
 }
 #q1 {
    background-image: url(../img/html5.png);
@@ -30,18 +30,22 @@
    height: 500px;
 }
 
-/* immagine che non va oltre la larghezza del contenitore */
+/* immagine che si sviluppa fino alla sua massima width, nel caso il contenitore fosse più grande non lo riempirebbe */
 #q10 img {
    max-width: 100%;
 }
 
 /* immagine che prende obbligatoriamente la larghezza del contenitore */
-/* #q11 {
-   width: auto;
+#q11 {
+   width: 900px;
+   position: relative;
+   z-index: 100;
 }
 #q11 img {
    width: 100%;
-} */
+   position: relative;
+   z-index: 0;
+}
 
 /* Format CSS */
 h3 {

@@ -3,7 +3,6 @@ Per selezionare dei selettori specifici utilizzo id e classi.
 
 Mentre l'id può essere assegnato ad un solo elemento, infatti viene definito univoco, la stessa classe può essere assegnata a più elementi.
 Posso pure assegnare più classi allo stesso elemento.
-
 */
 
 #red {
@@ -18,7 +17,7 @@ Posso pure assegnare più classi allo stesso elemento.
 Se due selettori uguali assegnano alla stessa proprietà valori diversi vince l'ultimo dichiarato.
 
 Specificità:
-- div => 1
+- elemento (div) => 1
 - classi => 10
 - id => 100
 - stili inline => 1000
