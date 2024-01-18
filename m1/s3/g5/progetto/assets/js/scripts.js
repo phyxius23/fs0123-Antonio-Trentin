@@ -180,8 +180,10 @@ function dice(){
 Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 function whoIsBigger(num1, num2){
-   return (num1 > num2) ? num1 : num2;
+   // return (num1 > num2) ? num1 : num2;
+   return Math.max(num1, num2);
 }
+console.log(whoIsBigger(15, 10));
 
 /* ESERCIZIO 3
 Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -277,7 +279,7 @@ console.log(howManyDays('2010/05/22'));
 */
 function isTodayMyBirthday(){
    let todayDate = new Date().toLocaleDateString();
-   let birthdayDate = new Date('2023-02-17').toLocaleDateString();
+   let birthdayDate = new Date('2024-01-17').toLocaleDateString();
 
    return todayDate === birthdayDate ? true : false;
 }
@@ -551,15 +553,30 @@ halfTree(4);
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
   Esempio:
-  tree(3)
+  tree(4)
 
-  *
- ***
-*****
-
-
+   *     => calcolo spazi: nr ricevuto - counter (1) | stampo asterisco per il valore del counter
+  ***    => (2 x 2) - 1
+ *****   => (3 x 2) - 1
+*******  => (4 x 2) - 1
 */
+function tree(varNumber) {
+   for(let i = 1; i <= varNumber; i++) {
+      let text = '';
 
+      // stampo spazi vuoti
+      for(let spaces = 0; spaces <= (varNumber - i); spaces++) {
+         text += ' ';
+      }
+
+      // stampo asterischi
+      for(let asterisk = 1; asterisk <= (i * 2) - 1; asterisk++) {
+         text += '*';
+      }
+      console.log(text);
+   }
+}
+tree(5);
 
 
 /* ESERCIZIO 29
@@ -569,11 +586,10 @@ halfTree(4);
 function isItPrime(varNumber){
    let varBoolean = false;
 
-   for(let counter = 2; counter < varNumber; counter++){
+   for (let counter = 2; counter < varNumber; counter++){
 
-      if(varNumber % counter == 0){
+      if (varNumber % counter == 0) {
          return false;
-      }else{
       }
    }
    return true
